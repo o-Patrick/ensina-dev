@@ -1,0 +1,17 @@
+CSS3
+
+CSS tem três "elementos": seletor, atributo e valor (pelo que lembro são esses os nomes do dois últimos).
+
+O seletor é o nome de um elemento/id/classe (já falo de id e classe) que tá no .html, o atributo é uma característica do seletor e o valor é a característica do atributo (quase que nem aquelas bonequinhas russas). Ele fica assim:
+
+seletor{
+         atributo: valor;
+}
+
+O ; é obrigatório no final de todo atributo. Um exemplo mais prático:
+
+h1{
+     font-size: 15 pt;
+}
+
+Todo h1 vai ter o tamanho de fonte de 15 pontos

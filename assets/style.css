@@ -10,8 +10,50 @@ body{
 	max-width: 900px;
 }
 
+a:hover{
+	color: #000;
+}
+
+header a{
+	color: #000;
+	text-decoration: none;
+}
+
+header a:hover{
+	padding: 5px 10px;
+}
+
+.logo a:hover{
+	text-decoration: underline;
+}
+
+.author a{
+	font-weight: 700;
+}
+
+.author a::after{
+	content: " \01F517";
+}
+
+header a:hover, .index-list a:hover{
+	background-color: #dddddd;
+}
+
+header a:hover, .index-list a:hover, .repository a:hover{
+	border-radius: 10px;
+	transition: linear .15s;
+}
+
 main{
-	height: 85vh;
+	height: 65vh;
+}
+
+.index-list a:hover, .repository a:hover{
+	padding: 1px 5px;
+}
+
+.repository a:hover{
+	background-color: #c7c6c6;
 }
 
 footer{
