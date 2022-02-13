@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../assets/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/style.css">
+	<title>Ensina Dev HTML5</title>
+	</style>
+</head>
+<body>
+	<!-- Corpo padrão
+
+	<strong>&lt;&gt;</strong>
+
+	<p>
+		<a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+			Link with href
+		</a>
+	</p>
+	<div class="collapse" id="collapseExample">
+		<div class="card card-body">
+			Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+		</div>
+	</div>
+	-->
+	
+	<main>
+		<h1>HTML5</h1>
+		<section id="html-basico">
+			<p>
+				<a class="btn btn-primary" data-bs-toggle="collapse" href="#html-basico-texto" role="button" aria-expanded="false" aria-controls="collapseExample">
+					Básico
+				</a>
+			</p>
+			<div class="collapse" id="html-basico-texto">
+				<div class="card card-body">
+					<h2>Básico</h2>
+					<p>Antes de qualquer coisa, <strong>o que define um documento HTML</strong> é o <strong>tipo de arquivo</strong>. No caso de uma <strong>imagem</strong>, ela pode aparecer como <strong>.jpg</strong> ou <strong>.png</strong>, correto? Um <strong>PDF</strong> aparece como <strong>.pdf</strong>. Um <strong>documento HTML</strong> segue a mesma linha, tendo a <strong>extensão .html</strong>. Portanto, antes de fazer <strong>qualquer coisa</strong>, deve-se criar um <strong>arquivo novo</strong> e <strong>salvá-lo</strong> com (quase) o <strong>nome</strong> que quiser* com a <strong>extensão</strong> .html: <strong>nome.html</strong></p>
+					<p><sup>* Sempre se atentar a deixar <strong>tudo</strong> em <strong>letras minúsculas</strong> e <strong>sem espaços</strong> entre os caracteres para facilitar o desenvolvimento de <strong>qualquer</strong> código.</sup></p>
+					<p>Agora começando pelo básico mesmo. <strong>HTML</strong> é uma <strong>linguagem de marcação</strong>. Isso significa que ela literalmente vai falar pro navegador (Chrome, Firefox etc) o que cada coisinha do site significa, se é um título, parágrafo, imagem etc. A <strong>estrutura básica do HTML5</strong> é essa:</p>
+					<div class="meu-codigo">
+						<pre>
+							<code>
+								<strong>&lt;!DOCTYPE html&gt;</strong>
+								<strong>&lt;html&gt;</strong>
+								<strong>&lt;head&gt;</strong>
+									<strong>&lt;title&gt;</strong>Nome do documento<strong>&lt;/title&gt;</strong>
+								<strong>&lt;/head&gt;</strong>
+								<strong>&lt;body&gt;</strong>
+								<strong>&lt;/body&gt;</strong>
+								<strong>&lt;/html&gt;</strong>
+							</code>
+						</pre>
+					</div>
+					<p>Tudo entre <strong>&lt;&gt;</strong> são as tags que marcam pro programa o que cada coisa é. A maioria tem uma abertura (ex: <strong>&lt;body&gt;</strong>) só com o nome da tag e fechamento (ex: <strong>&lt;/body&gt;</strong>) indicada com uma barra antes do nome da tag. Porém nem todas são assim. Existe uma outra linguagem de marcação chamada XML (que não conheço), que por conta de compatibilidade de código, foi criado o XHTML, que basicamente é uma versão de HTML com umas regras a mais. Fui pesquisar e pelo jeito o HTML5 permitiu que a web funcionasse muito melhor, não precisando mais tanto do XHTML, então não vale a pena explicar muito. Falei isso tudo pra explicar sobre as tags sem fechamento. O tipo que a gente viu até agora tem a abertura (ex: <strong>&lt;body&gt;</strong>) e o fechamento (ex: <strong>&lt;/body&gt;</strong>), mas algumas, como a tag para imagem, não tem o fechamento, então ela só fica como <strong>&lt;img&gt;</strong>. Em HTML5 ela fica do jeito que mostrei agora, mas no caso de XHTML, esse tipo de tag tem uma barra no final dela própria: <strong>&lt;img/&gt;</strong>. Então se ver essa barra, é porque o código seguiu essa regra XHTML. Mas como eu já disse, a gente vai focar no HTML5, então sem essa barra no final. (Ela só continua no caso de existirem tanto a abertura quanto o fechamento, não pode esquecer).</p>
+					<p>Agora <strong>explicando a estrutura básica</strong> antes do último parágrafo:</p>
+					<p><strong>&lt;!DOCTYPE html&gt;</strong> fala pro navegador que o tipo (type) do documento (doc) é HTML. Isso ajuda o navegador a funcionar direito.</p>
+					<p><strong>&lt;html&gt;&lt;/html&gt;</strong> indica que <strong>tudo</strong> entre a abertura <strong>&lt;html&gt;</strong> e o fechamento <strong>&lt;/html&gt;</strong> está dentro da <strong>parte HTML do código</strong>, então tudo que envolva HTML a gente coloca lá. É a parte mais essencial de um código HTML.</p>
+		
+					<p>Então já dentro do HTML, a gente tem as tags <strong>&lt;head&gt;&lt;/head&gt;</strong> que indicam o <strong>cabeçalho da página</strong>. Esse cabeçalho <strong>não é visível</strong> no site, ele é a parte de <strong>configurações</strong> do documento.</p>
+					<p>Uma das configurações é a tag <strong>&lt;title&gt;&lt;/title&gt;</strong> que indica qual é o título daquele documento, e é o que aparece alí <strong>na aba no navegador</strong> (lembrando que essa tag fica sempre dentro de <strong>&lt;head&gt;&lt;/head&gt;</strong>).</p>
+					<p>Logo depois do cabeçalho vem a tag <strong>&lt;body&gt;&lt;/body&gt;</strong> que indica o <strong>corpo do </strong>HTML, então essa sim <strong>é visível</strong>. É dentro dela que a gente coloca tudo o que queremos que as pessoas vejam no site: títulos, parágrafos, imagens, vídeos, áudios e tudo mais.</p>
+					<p>Lembrando também que as tags só servem para falar ao navegador o que cada coisa daquelas é (por isso linguagem de marcação), isso também vai ajudar muito no <strong>CSS</strong>.</p>
+				</div>
+			</div>
+		</section>
+		
+		<section id="html-h-p-br-img">
+			<p>
+				<a class="btn btn-primary" data-bs-toggle="collapse" href="#html-t-p-br-img-texto" role="button" aria-expanded="false" aria-controls="collapseExample">
+					Títulos, parágrafo, quebra de linha e imagens
+				</a>
+			</p>
+			<div class="collapse" id="html-t-p-br-img-texto">
+				<div class="card card-body">
+					<p>Algumas tags mais básicas que tem são de <strong>títulos</strong>, <strong>parágrafo</strong> e <strong>imagem</strong>.</p>
+					<p>Para <strong>título</strong> existem <strong>6</strong>, começando com <strong>h1</strong> e indo até <strong>h6</strong>, então:</p>
+					<p><strong>&lt;h1&gt;&lt;/h1&gt;</strong></p>
+					<p><strong>&lt;h2&gt;&lt;/h2&gt;</strong></p>
+					<p><strong>&lt;h3&gt;&lt;/h3&gt;</strong></p>
+					<p><strong>&lt;h4&gt;&lt;/h4&gt;</strong></p>
+					<p><strong>&lt;h5&gt;&lt;/h5&gt;</strong></p>
+					<p><strong>&lt;h6&gt;&lt;/h6&gt;</strong></p>
+					<p>Por <strong>padrão</strong> o navegador deixa elas num tamanho maior no <strong>h1</strong> e que vai diminuindo até o <strong>h6</strong> (tudo em negrito), mas isso não significa que os títulos de números diferentes tenham um naturalmente tamanho diferente, é só pra gente conseguir diferenciar na hora antes de colocar o <strong>CSS</strong>. Na verdade, a diferença de números mostra uma <strong>hierarquia</strong>, então o <strong>h1</strong> mostra que aquele título é do <strong>tipo mais importante</strong>, o <strong>h2</strong> não é tão importante quanto o <strong>h1</strong>, mas mais que o <strong>h3</strong>, isso acontecendo até o <strong>h6</strong>.</p>
+					<p>Pra parágrafo tem a tag <strong>&lt;p&gt;&lt;/p&gt;</strong>, na qual se coloca partes maiores de texto, pulando automaticamente uma linha em relação ao que estiver antes e depois das tags.</p>
+					<p>Também dá pra pular linha (oficialmente "quebra de linha") usando <strong>&lt;br&gt;</strong>. Esta é uma das tags <strong>sem fechamento</strong>, por isso coloquei só <strong>&lt;br&gt;</strong> ao invés de <strong>&lt;br&gt;&lt;/br&gt;</strong>. Em <strong>XHTML</strong> ficaria <strong>&lt;br/&gt;</strong>, mas novamente, <strong>vamos ficar no padrão HTML5 (sem a barra)</strong>.</p>
+					<p>Para imagens é a tag <strong>&lt;img&gt;</strong>. Também não tem fechamento, já falamos do porquê. Para indicar qual imagem usar, precisa colocar o <strong>atributo src=""</strong> que <strong>significa source</strong> e vai mostrar o <strong>caminho</strong> à fonte da imagem que você quer. No caso da imagem estar <strong>na mesma pasta do arquivo .html</strong>, pode colocar assim: <strong>src="nome.jpg"</strong>. Se ela está em <strong>uma pasta dentro da pasta do arquivo</strong>, precisa indicar isso também: <strong>src="nomePasta/nomeImagem.jpg"</strong>. Caso você ainda não tenha o caminho do arquivo, pode colocar um <strong>#</strong> em <strong>src</strong> (meio que enchendo linguiça) <strong>src="#"</strong>.</p>
+					<p>Aqui um código para visualizar como os itens são mostrados com os estilos que a gente tem:</p>
+		
+					<h1>Aqui é o título mais importante</h1>
+					<h2>Aqui é o segundo título mais importante</h2>
+					<h3>Aqui é o terceiro título mais importante</h3>
+					<h4>Aqui é o quarto título mais importante</h4>
+					<h5>Aqui é o quinto título mais importante</h5>
+					<h6>Aqui é o último título mais importante</h6>
+					<p>Aqui é um parágrafo</p>
+					<img src="assets/img/pexels-yuliya-kosolapova-11066975.jpg">
+		
+					<p>Aqui em cima é a imagem desta bela vaca de franja.</p>
+					<p>Tendo uma noção de como funciona, vamos voltar ao que compõe uma tag. Já vimos que existem aberturas (ex: <strong>&lt;head&gt;</strong>) e fechamentos (ex: <strong>&lt;/head&gt;</strong>), ou mesmo tags sozinhas (ex: <strong>&lt;br&gt;</strong>). Quando explicava a tag para imagens, citei o <strong>atributo src=""</strong> que mostra o caminho que o navegador deve seguir para encontrar aquela imagem. O caminho colocado dentro desse atributo é o <strong>valor</strong> dele. Portanto, as tags são compostas por <strong>abertura</strong> e <strong>fechamento</strong> (na maioria dos casos) e <strong>dentro da abertura</strong>, é possível colocar <strong>atributos</strong> e <strong>dentro dos atributos</strong>, seus respectivos <strong>valores</strong>: <strong>&lt;tag atributo="valor"&gt;&lt;/tag&gt;</strong> OU <strong>&lt;tag atributo="valor"&gt;</strong>.</p>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<p>Para visualizar o repositório onde está o <strong>código</strong> deste site, <a href="https://github.com/o-Patrick/ensina-dev" target="_blank">clique aqui</a>!</p>
+	</footer>
+
+	<script src="../assets/bootstrap.min.js"></script>
+</body>
+</html>
