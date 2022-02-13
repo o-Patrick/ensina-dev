@@ -1,3 +1,9 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body{
 	margin: auto;
 	margin-top: 20px;
@@ -5,12 +11,17 @@ body{
 }
 
 header{
-	background-color: rgb(202, 199, 199);
+	margin: auto;
+	margin-bottom: 20px;
+	max-width: 700px;
+	background-color: #dddddd;
 	padding: 10px;
+	border-radius: 10px;
 }
 
-header > div{
-	vertical-align: middle;
+header > p{
+	margin: 0;
+	text-align: center;
 }
 
 p{
@@ -18,15 +29,29 @@ p{
 }
 
 .meu-codigo{
-	margin-left: -400px;
+	margin-left: -445px;
 }
 
 img{
 	max-width: 200px;
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 950px){
 	body{
 		margin: 20px 30px;
+	}
+
+	p, .meu-codigo{
+		font-size: 1.8vw;
+	}
+}
+
+@media screen and (max-width: 450px){
+	body{
+		margin: 20px 30px;
+	}
+
+	p, .meu-codigo{
+		font-size: 4vw;
 	}
 }
