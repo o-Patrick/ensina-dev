@@ -12,7 +12,9 @@
 <body>
 
 	<header>
-		<p>Para visualizar o repositório onde está o código deste site, <a href="https://github.com/o-Patrick/ensina-dev" target="_blank">clique aqui</a>!</p>
+		<div>
+			<p>Para visualizar o repositório onde está o código deste site, <a href="https://github.com/o-Patrick/ensina-dev" target="_blank">clique aqui</a>!</p>
+		</div>
 	</header>
 
 	<!-- Padrão
@@ -49,19 +51,20 @@
 
 				<p>Agora começando pelo básico mesmo. <strong>HTML</strong> é uma <strong>linguagem de marcação</strong>. Isso significa que ela literalmente vai falar pro navegador (Chrome, Firefox etc) o que cada coisinha do site significa, se é um título, parágrafo, imagem etc. A <strong>estrutura básica do HTML5</strong> é essa:</p>
 
-				<pre>
-					<code>
-						<strong>&lt;!DOCTYPE html&gt;</strong>
-						<strong>&lt;html&gt;</strong>
-						<strong>&lt;head&gt;</strong>
-							<strong>&lt;title&gt;</strong>Nome do documento<strong>&lt;/title&gt;</strong>
-						<strong>&lt;/head&gt;</strong>
-						<strong>&lt;body&gt;</strong>
-		
-						<strong>&lt;/body&gt;</strong>
-						<strong>&lt;/html&gt;</strong>
-					</code>
-				</pre>
+				<div class="meu-codigo">
+					<pre>
+						<code>
+							<strong>&lt;!DOCTYPE html&gt;</strong>
+							<strong>&lt;html&gt;</strong>
+							<strong>&lt;head&gt;</strong>
+								<strong>&lt;title&gt;</strong>Nome do documento<strong>&lt;/title&gt;</strong>
+							<strong>&lt;/head&gt;</strong>
+							<strong>&lt;body&gt;</strong>
+							<strong>&lt;/body&gt;</strong>
+							<strong>&lt;/html&gt;</strong>
+						</code>
+					</pre>
+				</div>
 
 				<p>Tudo entre <strong>&lt;&gt;</strong> são as tags que marcam pro programa o que cada coisa é. A maioria tem uma abertura (ex: <strong>&lt;body&gt;</strong>) só com o nome da tag e fechamento (ex: <strong>&lt;/body&gt;</strong>) indicada com uma barra antes do nome da tag. Porém nem todas são assim. Existe uma outra linguagem de marcação chamada XML (que não conheço), que por conta de compatibilidade de código, foi criado o XHTML, que basicamente é uma versão de HTML com umas regras a mais. Fui pesquisar e pelo jeito o HTML5 permitiu que a web funcionasse muito melhor, não precisando mais tanto do XHTML, então não vale a pena explicar muito. Falei isso tudo pra explicar sobre as tags sem fechamento. O tipo que a gente viu até agora tem a abertura (ex: <strong>&lt;body&gt;</strong>) e o fechamento (ex: <strong>&lt;/body&gt;</strong>), mas algumas, como a tag para imagem, não tem o fechamento, então ela só fica como <strong>&lt;img&gt;</strong>. Em HTML5 ela fica do jeito que mostrei agora, mas no caso de XHTML, esse tipo de tag tem uma barra no final dela própria: <strong>&lt;img/&gt;</strong>. Então se ver essa barra, é porque o código seguiu essa regra XHTML. Mas como eu já disse, a gente vai focar no HTML5, então sem essa barra no final. (Ela só continua no caso de existirem tanto a abertura quanto o fechamento, não pode esquecer).</p>
 
