@@ -1,17 +1,163 @@
 CSS3
 
-CSS tem três "elementos": seletor, atributo e valor (pelo que lembro são esses os nomes do dois últimos).
+Básico
 
-O seletor é o nome de um elemento/id/classe (já falo de id e classe) que tá no .html, o atributo é uma característica do seletor e o valor é a característica do atributo (quase que nem aquelas bonequinhas russas). Ele fica assim:
+	CSS também não é linguagem de programação, nem de marcação, mas sim de folhas de estilo. Isso significa basicamente que ela serve para aplicar estilos aos elementos de uma página. Ou seja, deixar nosso site bonito.
 
-seletor{
-         atributo: valor;
-}
+	Um exemplo: no HTML, temos a tag <body></body> onde fica todo o conteúdo do site. Se quisermos alterar a cor de fundo de todo o body do documento, podemos fazer assim:
 
-O ; é obrigatório no final de todo atributo. Um exemplo mais prático:
+	body{
+		background-color: blue;
+	}
 
-h1{
-     font-size: 15 pt;
-}
+	Aqui, a palavra body (SEM OS <>) é nome do elemento que a gente quer mudar. Tudo o que estiver dentro de {} será aplicado ao nosso body. E nesse caso, nós fizemos uma declaração que muda a cor de fundo (background-color) do nosso body para azul (blue). Só não pode esquecer do detalhe do ponto e vírgula (;) no final de cada propriedade, ele é obrigatório. Outro detalhe é que as propriedades não podem estar em letras maiúsculas, nem com espaços. No caso de normalmente existir um espaço entre as palavras, precisa colocar um hífen (-) entre elas
 
-Todo h1 vai ter o tamanho de fonte de 15 pontos
+	Então, a estrutura básica em CSS é essa:
+
+	seletor{
+		atributo: valor;
+	}
+
+	Vimos que as tags html possuem o nome da tag na abertura/fechamento e dentro delas podemos colocar atributos com seus valores. CSS também tem sua própria estrutura: seletor e declaração (com propriedades e valores).
+
+	O seletor é o nome de um elemento, id ou classe que está no documento .html (lembrando que só pode colocar o nome da tag, sem os <>). A propriedade é uma característica do seletor (elemento que a gente está mechendo) e o valor é a característica da propriedade.
+
+	Mais exemplos práticos:
+
+	h1{
+		font-size: 15 pt;
+	}
+
+	Todo h1 vai ter o tamanho de fonte de 15 pontos.
+
+	p{
+		color: red;
+	}
+
+	Todo parágrafo terá a cor vermelha (sempre lembrar que "color" é somente a cor das letras).
+
+	img{
+		width: 300px;
+	}
+
+	Toda imagem terá 300 pixels de largura (width).
+
+Certo, mas onde fica o CSS?
+	Existem três formas de aplicar o CSS no seu HTML: inline, interno e externo.
+
+	1. Inline
+		É o tipo mais simples e específico. Usando os exemplos que já passem, ficaria assim:
+
+		h1{
+			font-size: 15 pt;
+		}
+
+		Vira:
+
+		<h1 style="font-size: 15 pt;">Título</h1>
+		------------------------------------------
+		p{
+			color: red;
+		}
+
+		Vira:
+
+		<p style="color: red;"></p>
+		------------------------------------------
+		img{
+			width: 300px;
+		}
+
+		Vira:
+
+		<img style="width: 300px">
+		------------------------------------------
+
+	2. Interno
+		Já é bem parecido com a forma como mostri primeiro, porém precisando colocar os seletores dentro da tag <style></style>, esta indo dentro de <head></head>:
+
+		<head>
+			<title>Document</title>
+			<style>
+				h1{
+					font-size: 15 pt;
+				}
+				p{
+					color: red;
+				}
+				img{
+					width: 300px;
+				}
+			</style>
+		</head>
+
+		Tranquilo também, né?
+
+	3. Externo
+		Para este é preciso criar um novo documento, mas ao invés de ter a extensão .html, precisa ser .css (ex: nomeDoc.css). A regra aqui é a mesma para um nome de arquivo .html, assim como para basicamente todo tipo de arquivo que um dia você tocar durante o desenvolvimento de algo.
+
+		Com o arquivo criado e salvo, segue a mesma forma que o CSS interno, porém sem a tag <style></style> já que o documento em si é CSS:
+
+		h1{
+			font-size: 15 pt;
+		}
+		p{
+			color: red;
+		}
+		img{
+			width: 300px;
+		}
+
+		Mas claramente o .html não vai saber magicamente onde está o .css, por isso é necessário indicar o caminho (o que acontece em apenas uma linha que também vai no <head></head>):
+
+		<link rel="stylesheet" href="nome.css">
+
+		"Link" já é um nome autoexplicativo para uma tag. O atributo rel="" indica a relação do conteúdo do link com o documento atual; neste caso é uma relação de folha de estilo. E href="" funciona exatamente da mesma forma que o src="" de <img>, é só indicar o caminho.
+
+	Prontinho. Mas a dúvida que deve ter surgido é: qual usar? Sempre dê preferência ao EXTERNO, ele deixa seu código muito mais organizado e profissional, com cada linguagem tendo seu próprio espaço. Além disso, ele pode ser aplicado em VÁRIOS documentos ao mesmo tempo, enquanto as outras dependem de um único documento; então precisaria fazer a mesma coisa em todas as páginas, o que nem preciso dizer o quanto é horroroso.
+	
+	Porém não é crime usar o interno, contanto que sejam poucas declarações ou até mesmo um exercício pequeno no qual quer testar alguma coisa. Já o inline é o caso mais específico de todos, porque ele não está sendo aplicado somente dentro daquele documento, mas também dentro de um ÚNICO ELEMENTO, então se quiser vários parágrafos com aquele estilo, é necessário fazer a mesma coisa para todos. Pois é...
+
+Cascata
+
+	CSS significa Folhas de Estilo em Cascata (Cascading Styles Sheets). Folhas de estilos já entendemos que são a aparência dos elementos. Mas o que significa "em cascata"? É bem simples, só lembrar de uma cachoeira. A água vem de cima e cai sobre tudo o que estiver abaixo dela. CSS funciona da mesma forma: o que é aplicado em um elemento, também é aplicado em tudo que estiver DENTRO dele.
+
+	Um exemplo voltando mais uma vez para o HTML: temos nossa tag <html></html>; dentro dela temos as tags <head></head> e <body></body>; dentro de <head></head> temos <title></title>; e dentro de <body></body> temos <h1></h1>, <p></p>, <img> etc. Já deu para perceber que existe uma hierarquia né? A estrutura não é só de enfeito, as coisas estão ligadas às que estão ACIMA delas.
+
+	Um exemplo mais prático com essa estrutura HTML:
+	
+	<body>
+		<h1>Título</h1>
+		<p>Um texto aleatório aqui.</p>
+	</body>
+
+	Se no CSS fizermos:
+
+	body{
+		color: white;
+		background-color: black;
+		font-size: 14pt;
+	}
+
+	Todos os elementos DENTRO de body terão cor de letra branca, cor de fundo preta e tamanho da fonte 14 pontos. Simples, né?
+	
+	A questão é que uma declaração não é eterna, na verdade quanto mais específico for a forma que você usa CSS, mais detalhadamente pode aplicar um estilo. Imaginando ainda o exemplo que acabei de dar, se fizer isso:
+
+	body{
+		color: white;
+		background-color: black;
+		font-size: 14pt;
+	}
+
+	p{
+		color: yellow;
+	}
+
+	Primeiramente o parágrafo HERDA a cor branca definida para o body, porém por ser mais específica (digitei diretamente p) ela SOBRESCREVE a configuração anterior, então a cor que se sobressai no caso de p é a amarela.
+
+	Chega de teoria e deixa eu mostrar logo como fica
+
+	<div> <!-- Aplicar estilos para esta div -->
+		<h1>Título</h1>
+		<p>Um texto aleatório aqui.</p>
+	</div>

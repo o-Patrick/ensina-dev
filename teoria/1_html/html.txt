@@ -2,7 +2,7 @@ HTML5
 
 Básico
 
-	Antes de qualquer coisa, o que define um documento HTML é o tipo de arquivo. No caso de uma imagem, ela pode aparecer como .jpg ou .png, correto? Um PDF aparece como .pdf. Um documento HTML segue a mesma linha, tendo a extensão .html. Portanto, antes de fazer qualquer coisa, deve-se criar um arquivo novo e salvá-lo com (quase) o nome que quiser* com a extensão .html: nome.html
+	Antes de qualquer coisa, qualquer linguagem que existe está em inglês, por isso as palavras próprias delas sempre estão no idioma. O que define um documento HTML é o tipo de arquivo. No caso de uma imagem, ela pode aparecer como .jpg ou .png, correto? Um PDF aparece como .pdf. Um documento HTML segue a mesma linha, tendo a extensão .html. Portanto, antes de fazer qualquer coisa, deve-se criar um arquivo novo e salvá-lo com (quase) o nome que quiser* com a extensão .html: nome.html
 
 	* Sempre se atentar a deixar tudo em letras minúsculas e sem espaços entre os caracteres para facilitar o desenvolvimento de qualquer código.
 
@@ -31,7 +31,7 @@ Básico
 
 	Logo depois do cabeçalho vem a tag <body></body> que indica o corpo do HTML, então essa sim é visível. É dentro dela que a gente coloca tudo o que queremos que as pessoas vejam no site: títulos, parágrafos, imagens, vídeos, áudios e tudo mais.
 
-	Lembrando também que as tags só servem para falar ao navegador o que cada coisa daquelas é (por isso linguagem de marcação), isso também vai ajudar muito no CSS.
+	Lembrando também que as tags só servem para falar ao navegador o que cada coisa daquelas é (por isso linguagem de marcação), isso também vai ajudar muito no CSS (que veremos depois).
 
 Títulos, parágrafo, quebra de linha e imagens
 
@@ -53,7 +53,7 @@ Títulos, parágrafo, quebra de linha e imagens
 
 	Por padrão o navegador deixa elas num tamanho maior no h1 e que vai diminuindo até o h6 (tudo em negrito), mas isso não significa que os títulos de números diferentes tenham um naturalmente tamanho diferente, é só pra gente conseguir diferenciar na hora antes de colocar o CSS. Na verdade, a diferença de números mostra uma hierarquia, então o h1 mostra que aquele título é do tipo mais importante, o h2 não é tão importante quanto o h1, mas mais que o h3, isso acontecendo até o h6.
 
-	Pra parágrafo tem a tag <p></p>, na qual se coloca partes maiores de texto, pulando automaticamente uma linha em relação ao que estiver antes e depois das tags.
+	Para parágrafo tem a tag <p></p>, na qual se coloca partes maiores de texto, pulando automaticamente uma linha em relação ao que estiver antes e depois das tags. Se colocar um texto normal entre <p> e </p>, ele é considerado um conteúdo do parágrafo, então aparece como texto mesmo.
 
 	Também dá pra pular linha (oficialmente "quebra de linha") usando <br>. Esta é uma das tags sem fechamento, por isso coloquei só <br> ao invés de <br></br>. Em XHTML ficaria <br/>, mas novamente, vamos ficar no padrão HTML5 (sem a barra).
 
@@ -75,3 +75,21 @@ Títulos, parágrafo, quebra de linha e imagens
 	Aqui em cima é a imagem desta bela vaca de franja.
 
 	Tendo uma noção de como funciona, vamos voltar ao que compõe uma tag. Já vimos que existem aberturas (ex: <head>) e fechamentos (ex: </head>), ou mesmo tags sozinhas (ex: <br>). Quando explicava a tag para imagens, citei o atributo src="" que mostra o caminho que o navegador deve seguir para encontrar aquela imagem. O caminho colocado dentro desse atributo é o valor dele. Portanto, as tags são compostas por abertura e fechamento (na maioria dos casos) e dentro da abertura, é possível colocar atributos e dentro dos atributos, seus respectivos valores: <tag atributo="valor"></tag> OU <tag atributo="valor">.
+
+ID, classes e nome
+
+	Esses três são atributos. Basicamente servem para identificar as tags.
+	
+	ID é um identificador único, porém pode ser aplicado em quantos elementos quiser, o que é contra as regras. Sempre deixe em um único lugar.
+	
+	Class (em inglês mesmo) é parecido com o ID, com a única diferença de poder ser aplicado em vários elementos. Só isso mesmo.
+
+	Name (também em inglês) é mais parecido ainda com o class, pode ser aplicado em vários elementos.
+
+	A tag pode ficar assim:
+
+	<p id="idTexto" class="classTexto" name="nameTexto" >Texto qualquer</p>
+
+	O valor dentro de todos pode ser o que quiser, mas ainda seguindo minúsculas e ao invés de usar hífen (-) no lugar dos espaços, colocar a primeira letra da próxima palavra em maiúscula que nem fiz (isso facilita na hora de usar as linguagens de programação).
+
+	O mais importante de usar id e class é na hora do CSS, o que é explicado na página própria dele. Já o name não é tão importante assim para o HTML em si e o CSS, mas sim para quando formos usar uma linguagem de programação (como PHP e JavaScript) para manipular dados e elementos da página.
