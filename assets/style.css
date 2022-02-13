@@ -41,14 +41,36 @@ img{
 		margin: 20px 30px;
 	}
 
+	.meu-codigo{
+		margin-left: -375px;
+	}
+
 	p, .meu-codigo{
 		font-size: 1.8vw;
+	}
+}
+
+@media screen and (max-width: 750px){
+	body{
+		margin: 20px 30px;
+	}
+
+.meu-codigo{
+	margin-left: -745px;
+}
+
+	p, .meu-codigo{
+		font-size: 4vw;
 	}
 }
 
 @media screen and (max-width: 450px){
 	body{
 		margin: 20px 30px;
+	}
+
+	.meu-codigo{
+		margin-left: -385px;
 	}
 
 	p, .meu-codigo{
