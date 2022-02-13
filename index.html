@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/bootstrap.min.css">
+	<title>HTML5</title>
+	<style>
+		body{
+			margin: auto;
+			max-width: 800px;
+			text-align: justify;
+		}
+	</style>
+</head>
+<body>
+	<h1>HTML5</h1>
+	<p>
+		<a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+			Básico
+		</a>
+	</p>
+	<div class="collapse" id="collapseExample">
+		<div class="card card-body">
+			<h2>Básico</h2>
+
+			<p>Começando pelo básico mesmo. HTML é uma linguagem de marcação. Isso significa que ela literalmente vai falar pro navegador (Chrome, Firefox etc) o que cada coisinha do site significa, se é um título, parágrafo, imagem etc. A estrutura básica do HTML é essa:</p>
+
+			<pre>
+				<code>
+					&lt;!DOCTYPE html&gt;
+					&lt;html&gt;
+					&lt;head&gt;
+						<title>Document</title>
+					&lt;/head&gt;
+					&lt;body&gt;
+					
+					&lt;/body&gt;
+					&lt;/html&gt;
+				</code>
+			</pre>
+
+			<p>Tudo entre <strong>&lt;&gt;</strong> são as tags que marcam pro programa o que cada coisa é. A maioria tem uma abertura (ex: <strong>&lt;body&gt;</strong>) só com o nome da tag e fechamento (ex: <strong>&lt;/body&gt;</strong>) indicada com uma barra antes do nome da tag. Porém nem todas são assim. Existe uma outra linguagem de marcação chamada XML (que não conheço), que por conta de compatibilidade de código, foi criado o XHTML, que basicamente é uma versão de HTML com umas regras a mais. Fui pesquisar e pelo jeito o HTML5 permitiu que a web funcionasse muito melhor, não precisando mais tanto do XHTML, então não vale a pena explicar muito. Falei isso tudo pra explicar sobre as tags sem fechamento. O tipo que a gente viu até agora tem a abertura (ex: <strong>&lt;body&gt;</strong>) e o fechamento (ex: <strong>&lt;/body&gt;</strong>), mas algumas, como a tag para imagem, não tem o fechamento, então ela só fica como <strong>&lt;img&gt;</strong>. Em HTML5 ela fica do jeito que mostrei agora, mas no caso de XHTML, esse tipo de tag tem uma barra no final dela própria: <strong>&lt;img/&gt;</strong>. Então se ver essa barra, é porque o código seguiu essa regra XHTML. Mas como eu já disse, a gente vai focar no HTML5, então sem essa barra no final. (Ela só continua no caso de existirem tanto a abertura quanto o fechamento, não pode esquecer).</p>
+
+			<p>Agora explicando a estrutura básica antes do último parágrafo:</p>
+
+			<p><strong>&lt;!DOCTYPE html&gt;</strong> fala pro navegador que o tipo (type) do documento (doc) é HTML. Isso ajuda o navegador a funcionar direito.</p>
+
+			<p><strong>&lt;html&gt;&lt;/html&gt;</strong> indica que TUDO entre a abertura <strong>&lt;html&gt;</strong> e o fechamento <strong>&lt;/html&gt;</strong> está dentro da parte HTML do código, então tudo que envolva HTML a gente coloca lá. É a parte mais essencial de um código HTML.</p>
+
+			<p>Então já dentro do HTML, a gente tem as tags <strong>&lt;head&gt;&lt;/head&gt;</strong> que indicam o CABEÇALHO. Esse cabeçalho não é visível no site, ele é a parte de CONFIGURAÇÕES do documento.</p>
+
+			<p>Uma das configurações é a tag <strong>&lt;title&gt;&lt;/title&gt;</strong> que indica qual é o título daquele documento, e é o que aparece alí na aba no navegador (lembrando que essa tag fica sempre DENTRO de <strong>&lt;head&gt;&lt;/head&gt;</strong>).</p>
+
+			<p>Logo depois do cabeçalho vem a tag <strong>&lt;body&gt;&lt;/body&gt;</strong> que indica o CORPO do HTML, então essa sim é visível. É dentro dela que a gente coloca tudo o que queremos que as pessoas vejam no site: títulos, parágrafos, imagens, vídeos, áudios e tudo mais.</p>
+
+			<p>Vou mandar mais uma explicação com um código mesmo que mostra o que as tags podem fazer. Lembrando também que as tags só servem para falar ao navegador o que cada coisa daquelas é (por isso linguagem de marcação), isso também vai ajudar muito no CSS.</p>
+		</div>
+	</div>
+	<script src="assets/bootstrap.min.js"></script>
+</body>
+</html>
