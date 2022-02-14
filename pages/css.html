@@ -7,6 +7,15 @@
 	<link rel="stylesheet" href="../assets/bootstrap.min.css">
 	<link rel="stylesheet" href="../assets/style.css">
 	<title>Ensina Dev CSS3</title>
+	<style>
+		.styleExample{
+			color: white;
+			background-color: black;
+			font-size: 14pt;
+		}
+		.styleExample p{
+			color: yellow;
+		}
 	</style>
 </head>
 <body>
@@ -15,25 +24,12 @@
 		<h1 class="logo"><a href="../index.html" target="_self">Ensina Dev</a></h1>
 		<p class="author">Por <a href="https://github.com/o-Patrick" target="_blank">Patrick Fernandes Leme</a></p>
 	</header>
-
-	<!-- Corpo padrão
-
-	<strong>&lt;&gt;</strong>
-
-	<p>
-		<a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-			Link with href
-		</a>
-	</p>
-	<div class="collapse" id="collapseExample">
-		<div class="card card-body">
-			Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-		</div>
-	</div>
-	-->
 	
 	<main>
-		<h2>CSS3</h2>
+		<!-- Corpo padrão
+	
+		<strong>&lt;&gt;</strong>
+	
 		<p>
 			<a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
 				Link with href
@@ -44,6 +40,285 @@
 				Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
 			</div>
 		</div>
+		-->
+
+		<h2>CSS3</h2>
+
+		<section class="basic">
+			<p>
+				<a class="btn btn-primary" data-bs-toggle="collapse" href="#basic" role="button" aria-expanded="false" aria-controls="collapseExample">
+					Básico
+				</a>
+			</p>
+			<div class="collapse" id="basic">
+				<div class="card card-body">
+					<p><strong>CSS</strong> também não é linguagem de programação, nem de marcação, mas sim de <strong>folhas de estilo</strong>. Isso significa basicamente que ela serve para <strong>aplicar estilos aos elementos</strong> de uma página. Ou seja, deixar nosso site bonito.</p>
+
+					<p>Um exemplo: no HTML, temos a tag &lt;body&gt;&lt;/body&gt; onde fica todo o conteúdo do site. Se quisermos alterar a cor de fundo de todo o body do documento, podemos fazer assim:</p>
+
+					<hr>
+
+					<code>
+					&nbsp;&nbsp;body{<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;background-color: blue;<br>
+					&nbsp;&nbsp;}<br>
+					</code>
+
+					<hr>
+
+					<p>Aqui, a palavra <strong>body (sem os &lt;&gt;)</strong> é o "nome" do elemento que a gente quer mudar. Tudo o que estiver <strong>dentro de {}</strong> será aplicado ao nosso <strong>body</strong>. E nesse caso, nós fizemos uma declaração que muda a <strong>cor de fundo (background-color)</strong> do nosso <strong>body</strong> para <strong>azul (blue)</strong>. Só <strong>não pode esquecer</strong> do detalhe do <strong>ponto e vírgula (;) no final de cada propriedade</strong>, ele <strong>é obrigatório</strong>. Outro detalhe é que as propriedades <strong>não podem estar</strong> em letras <strong>maiúsculas</strong>, nem com <strong>espaços</strong>. No caso de normalmente existir um espaço entre as palavras, precisa colocar um <strong>hífen (-)</strong> entre elas</p>
+
+					<p>Então, a <strong>estrutura básica de CSS</strong> é essa:</p>
+
+					<hr>
+
+					<code>
+					&nbsp;&nbsp;seletor{<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;atributo: valor;<br>
+					&nbsp;&nbsp;}<br>
+					</code><br>
+
+					<hr>
+
+					<p>Vimos que as tags html possuem o nome da tag na abertura/fechamento e dentro delas podemos colocar atributos com seus valores. <strong>CSS</strong> também tem sua própria <strong>estrutura: seletor e declaração (com propriedades e valores)</strong>.</p>
+
+					<p>O <strong>seletor</strong> é o nome de um <strong>elemento, id ou classe</strong> que está no documento <strong>.html</strong> (lembrando que só pode colocar o nome da tag, sem os &lt;&gt;). A <strong>propriedade</strong> é uma característica do seletor (elemento que a gente está mechendo) e o <strong>valor</strong> é a característica da propriedade.</p>
+
+					<p>Mais exemplos práticos:</p>
+
+					<hr>
+
+					<code>
+					&nbsp;&nbsp;h1{<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;font-size: 15 pt;<br>
+					&nbsp;&nbsp;}<br>
+					</code>
+
+					<hr>
+
+					<p>Todo <strong>h1</strong> vai ter o <strong>tamanho de fonte</strong> de <strong>15 pontos</strong>.</p>
+
+					<hr>
+
+					<code>
+					&nbsp;&nbsp;p{<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;color: red;<br>
+					&nbsp;&nbsp;}<br>
+					</code>
+
+					<hr>
+
+					<p>Todo <strong>parágrafo</strong> terá a <strong>cor vermelha</strong> (sempre lembrar que <strong>"color"</strong> é somente a <strong>cor das letras</strong>).</p>
+
+					<hr>
+
+					<code>
+					&nbsp;&nbsp;img{<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;width: 300px;<br>
+					&nbsp;&nbsp;}<br>
+					</code>
+
+					<hr>
+
+					<p>Toda imagem terá <strong>300 pixels</strong> de <strong>largura (width)</strong>.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="link">
+			<p>
+				<a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+					Certo, mas onde fica o CSS?
+				</a>
+			</p>
+			<div class="collapse" id="collapseExample">
+				<div class="card card-body">
+					<p>Existem <strong>três formas de aplicar o CSS</strong> no seu HTML: <strong>inline</strong>, <strong>interno</strong> e <strong>externo</strong>.</p>
+
+					<h3>1. Inline</h3>
+						<p>É o tipo mais <strong>simples e específico</strong>. Usando os <strong>exemplos</strong> que já passei, ficaria assim:</p>
+
+						<hr>
+
+						<code>
+							h1{<br>
+							&nbsp;&nbsp;font-size: 15 pt;<br>
+							}<br><br>
+						</code>
+
+						<p>Vira:</p>
+
+						<code>
+							&lt;h1 style="font-size: 15 pt;"&gt;Título&lt;/h1&gt;
+						</code>
+						
+						<hr>
+
+						<code>
+							p{<br>
+								&nbsp;&nbsp;color: red;<br>
+							}<br><br>
+						</code>
+
+						<p>Vira:</p>
+
+						<code>
+							&lt;p style="color: red;"&gt;Texto&lt;/p&gt;
+						</code>
+
+						<hr>
+
+						<code>
+							img{<br>
+								&nbsp;&nbsp;width: 300px;
+							}<br><br>
+						</code>
+
+						<p>Vira:</p>
+
+						<code>&lt;img style="width: 300px;"&gt;</code>
+
+						<hr>
+
+					<h3>2. Interno</h3>
+						<p>Já é bem parecido com a forma <strong>como mostrei primeiro</strong>, porém precisando colocar os <strong>seletores dentro da tag &lt;style&gt;&lt;/style&gt;</strong>, esta indo <strong>dentro de &lt;head&gt;&lt;/head&gt;</strong>:</p>
+
+						<hr>
+
+						<code>
+							&lt;head&gt;<br>
+							&nbsp;&nbsp;&lt;title&gt;Document&lt;/title&gt;<br>
+							&nbsp;&nbsp;&lt;style&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;h1{<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-size: 15pt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;p{<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: red;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;img{<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width: 300px;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+							&nbsp;&nbsp;&lt;/style&gt;<br>
+							&lt;/head&gt;<br>
+						</code>
+
+						<hr>
+
+						<p>Tranquilo também, né?</p>
+
+					<h3>3. Externo</h3>
+						<p>Para este é preciso criar um <strong>novo documento</strong>, mas ao invés de ter a extensão .html, precisa ser <strong>.css (ex: nomeDoc.css)</strong>. A regra aqui é a mesma para um nome de arquivo .html, assim como para basicamente todo tipo de arquivo que um dia você tocar durante o desenvolvimento de algo.</p>
+
+						<p>Com o arquivo criado e salvo, segue a <strong>mesma forma que o CSS interno, porém sem a tag &lt;style&gt;&lt;/style&gt;</strong> já que o documento em si é <strong>CSS</strong>:</p>
+
+						<hr>
+
+						<code>
+						&nbsp;&nbsp;h1{<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;font-size: 15 pt;<br>
+						&nbsp;&nbsp;}<br><br>
+
+						&nbsp;&nbsp;p{<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;color: red;<br>
+						&nbsp;&nbsp;}<br><br>
+
+						&nbsp;&nbsp;img{<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;width: 300px;<br>
+						&nbsp;&nbsp;}<br>
+						</code>
+
+						<hr>
+
+						<p>Mas claramente o .html <strong>não vai saber magicamente onde está o .css</strong>, por isso <strong>é necessário indicar o caminho</strong> (o que acontece em apenas uma linha que também vai no <strong>&lt;head&gt;&lt;/head&gt;</strong>):</p>
+
+						<hr>
+
+						<code>
+							&lt;link rel="stylesheet" href="nome.css"&gt;
+						</code>
+
+						<hr>
+
+						<p><strong>"Link"</strong> já é um nome autoexplicativo para uma tag. O <strong>atributo rel=""</strong> indica a <strong>relação</strong> do conteúdo do link com o documento atual; neste caso é uma <strong>relação de folha de estilo</strong>. E <strong>href=""</strong> funciona exatamente da mesma forma que o src="" de &lt;img&gt;, é só <strong>indicar o caminho</strong>.</p>
+
+					<p>Prontinho. Mas a dúvida que deve ter surgido é: <strong>qual usar?</strong> Sempre dê <strong>preferência ao externo</strong>, ele deixa seu código muito mais <strong>organizado e profissional</strong>, com cada linguagem tendo seu próprio espaço. Além disso, ele pode ser aplicado em <strong>vários documentos</strong> ao mesmo tempo, enquanto as outras dependem de um único documento; então precisaria fazer a mesma coisa em todas as páginas, o que nem preciso dizer o quanto é horroroso.</p>
+					
+					<p>Porém não é crime usar o <strong>interno</strong>, contanto que sejam poucas declarações ou até mesmo um exercício pequeno no qual quer testar alguma coisa. Já o <strong>inline</strong> é o caso <strong>mais específico de todos</strong>, porque ele não está sendo aplicado somente dentro daquele documento, mas também dentro de um <strong>único elemento</strong>, então se quiser vários parágrafos com aquele estilo, é necessário fazer a mesma coisa para todos. Pois é...</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="cascade">
+			<p>
+				<a class="btn btn-primary" data-bs-toggle="collapse" href="#cascade" role="button" aria-expanded="false" aria-controls="collapseExample">
+					Cascata
+				</a>
+			</p>
+			<div class="collapse" id="cascade">
+				<div class="card card-body">
+					<p><strong>CSS</strong> significa <strong>Folhas de Estilo em Cascata (Cascading Styles Sheets)</strong>. Folhas de estilos já entendemos que são a <strong>aparência dos elementos</strong>. Mas o que significa <strong>"em cascata"</strong>? É bem simples, só lembrar de uma cachoeira. A água vem de cima e cai sobre tudo o que estiver abaixo dela. CSS<strong> funciona da mesma forma:</strong> o que é aplicado em um elemento, também é aplicado em tudo que estiver <strong>dentro</strong> dele.</p>
+
+					<p>Um <strong>exemplo</strong> voltando mais uma vez para o HTML: temos nossa tag &lt;html&gt;&lt;/html&gt;; dentro dela temos as tags &lt;head&gt;&lt;/head&gt; e <strong>&lt;body&gt;&lt;/body&gt;</strong>; dentro de <strong>&lt;head&gt;&lt;/head&gt;</strong> temos <strong>&lt;title&gt;&lt;/title&gt;</strong>; e dentro de <strong>&lt;body&gt;&lt;/body&gt;</strong> temos <strong>&lt;h1&gt;&lt;/h1&gt;</strong>, <strong>&lt;p&gt;&lt;/p&gt;</strong>, <strong>&lt;img&gt;</strong> etc. Já deu para perceber que existe uma <strong>hierarquia</strong> né? A estrutura não é só de enfeite, as coisas estão <strong>ligadas às que estão acima</strong> delas.</p>
+
+					<p>Um <strong>exemplo</strong> mais prático com essa estrutura HTML:</p>
+
+					<hr>
+
+					<code>
+					&nbsp;&nbsp;&lt;body&gt;<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Título&lt;/h1&gt;<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Um texto aleatório aqui.&lt;/p&gt;<br>
+					&nbsp;&nbsp;&lt;/body&gt;<br>
+					</code>
+
+					<hr>
+
+					<p>Se para ela fizermos no CSS:</p>
+
+					<hr>
+
+					<code>
+					&nbsp;&nbsp;body{<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;color: white;<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;background-color: black;<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;font-size: 14pt;<br>
+					&nbsp;&nbsp;}<br>
+					</code>
+
+					<hr>
+
+					<p>Todos os elementos <strong>dentro</strong> de body terão <strong>cor de letra branca</strong>, <strong>cor de fundo preta</strong> e <strong>tamanho da fonte de 14 pontos</strong>. Simples, né?</p>
+
+					<p>A questão é que <strong>uma declaração não é "eterna"</strong>, na verdade <strong>quanto mais específico</strong> for a forma que você usa CSS, <strong>mais detalhadamente</strong> pode aplicar um estilo. Imaginando ainda o exemplo que acabei de dar, se fizer isso:</p>
+
+					<hr>
+
+					<code>
+					&nbsp;&nbsp;body{<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;color: white;<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;background-color: black;<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;font-size: 14pt;<br>
+					&nbsp;&nbsp;}<br><br>
+					
+					&nbsp;&nbsp;p{<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;color: yellow;<br>
+					&nbsp;&nbsp;}<br>
+					</code>
+
+					<hr>
+
+					<p>Primeiramente o parágrafo <strong>herda</strong> a cor branca definida para o body, porém por ser <strong>mais específica</strong> (digitei diretamente p) ela <strong>sobrescreve</strong> a configuração anterior, então a cor que se sobressai no caso de p é a amarela.</p>
+
+					<p>Chega de teoria e deixa eu mostrar logo como fica:</p>
+
+					<div class="styleExample">
+						<h1>Título</h1>
+						<p>Um texto aleatório aqui.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		
 	</main>
 
 	<footer>

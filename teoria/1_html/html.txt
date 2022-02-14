@@ -88,7 +88,7 @@ ID, classes e nome
 
 	A tag pode ficar assim:
 
-	<p id="idTexto" class="classTexto" name="nameTexto" >Texto qualquer</p>
+	<p id="idTexto" class="classTexto" name="nameTexto">Texto qualquer</p>
 
 	O valor dentro de todos pode ser o que quiser, mas ainda seguindo minúsculas e ao invés de usar hífen (-) no lugar dos espaços, colocar a primeira letra da próxima palavra em maiúscula que nem fiz (isso facilita na hora de usar as linguagens de programação).
 
