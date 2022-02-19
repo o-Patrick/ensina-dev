@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../assets/bootstrap.min.css">
-	<link rel="stylesheet" href="../assets/style.css">
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/style.css">
 	<title>Ensina Dev HTML5</title>
 	</style>
 </head>
@@ -32,18 +32,19 @@
 			</div>
 		</div>
 		-->
-		
+
 		<h2>HTML5</h2>
 
 		<section id="basic">
 			<p>
-				<a class="btn btn-primary" data-bs-toggle="collapse" href="#basic-text" role="button" aria-expanded="false" aria-controls="collapseExample">
+				<a class="btn btn-primary" data-bs-toggle="collapse" href="#basic-text" role="button" aria-expanded="false" aria-controls="basic-text">
 					Básico
 				</a>
 			</p>
 			<div class="collapse" id="basic-text">
 				<div class="card card-body">
 					<p>Antes de qualquer coisa, <strong>o que define um documento HTML</strong> é o <strong>tipo de arquivo</strong>. No caso de uma <strong>imagem</strong>, ela pode aparecer como <strong>.jpg</strong> ou <strong>.png</strong>, correto? Um <strong>PDF</strong> aparece como <strong>.pdf</strong>. Um <strong>documento HTML</strong> segue a mesma linha, tendo a <strong>extensão .html</strong>. Portanto, antes de fazer <strong>qualquer coisa</strong>, deve-se criar um <strong>arquivo novo</strong> e <strong>salvá-lo</strong> com (quase) o <strong>nome</strong> que quiser* com a <strong>extensão</strong> .html: <strong>nome.html</strong></p>
+
 					<p><sup>* Sempre se atentar a deixar <strong>tudo</strong> em <strong>letras minúsculas</strong> e <strong>sem espaços</strong> entre os caracteres para facilitar o desenvolvimento de <strong>qualquer</strong> código.</sup></p>
 
 					<p>Agora começando pelo básico mesmo. <strong>HTML</strong> é uma <strong>linguagem de marcação</strong>. Isso significa que ela literalmente vai falar pro navegador (Chrome, Firefox etc) o que cada coisinha do site significa, se é um título, parágrafo, imagem etc. A <strong>estrutura básica do HTML5</strong> é essa:</p>
@@ -88,7 +89,7 @@
 		
 		<section id="h-p-br-img">
 			<p>
-				<a class="btn btn-primary" data-bs-toggle="collapse" href="#h-p-br-img-text" role="button" aria-expanded="false" aria-controls="collapseExample">
+				<a class="btn btn-primary" data-bs-toggle="collapse" href="#h-p-br-img-text" role="button" aria-expanded="false" aria-controls="h-p-br-img-text">
 					Títulos, parágrafo, quebra de linha e imagens
 				</a>
 			</p>
@@ -140,13 +141,61 @@
 			</div>
 		</section>
 
+		<section class="commentary">
+			<p>
+				<a class="btn btn-primary" data-bs-toggle="collapse" href="#commentary-text" role="button" aria-expanded="false" aria-controls="commentary-text">
+					Comentários
+				</a>
+			</p>
+			<div class="collapse" id="commentary-text">
+				<div class="card card-body">
+					<p>Os códigos não são feitos só do conteúdo que será realmente usado na execução do programa. Também é possível fazer <strong>anotações que só poderão ser vistas no código</strong>, não na página ou aplicativo em si. Isso é feito com símbolos específicos e <strong>mudam de linguagem para linguagem</strong>. No caso do HTML, comentários são feitos entre <strong>&lt;!--</strong> e <strong>--&gt;</strong>. Por exemplo:</p>
+
+					<hr>
+
+					<code>
+						&lt;body&gt;<br>
+							&nbsp;&nbsp;&lt;p&gt;Texto que aparece na página porque não está em um comentário&lt;/p&gt;<br>
+							&nbsp;&nbsp;&lt;!-- Texto que NÃO aparece na página porque está em um comentário --&gt;<br>
+						&lt;/body&gt;<br>
+					</code>
+
+					<hr>
+
+					<p>É claro que no caso de um comentário mais longo de <strong>várias linhas</strong>, seria difícil fazer a mesma coisa para todas. Portanto, é só utilizar os mesmos símbolos e apertar Enter como faria normalmente em um texto:</p>
+
+					<hr>
+
+					<code>
+						&lt;body&gt;<br>
+						&nbsp;&nbsp;&lt;p&gt;Texto que aparece na página porque não está em um comentário&lt;/p&gt;<br>
+						&nbsp;&nbsp;&lt;!--<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;Texto que NÃO aparece na página porque está em um comentário.<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;A diferença é que essa linha também não aparece por também estar dentro de um comentário.<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;Nem essa.<br> <br>
+						&nbsp;&nbsp;&nbsp;&nbsp;Essa aqui também não!<br>
+						&nbsp;&nbsp;--&gt;<br>
+						&lt;/body&gt;<br>
+					</code>
+
+					<hr>
+
+					<p>O restultado dos dois códigos é esse:</p>
+
+					<img src="../assets/img/commentary-test.PNG" class="smallImg" alt="Teste de comentário">
+
+					<p>Essa mecânica é <strong>importante</strong> para <strong>documentar</strong> o que acontece no seu código, para que <strong>não esqueça</strong> de detalhes e também <strong>auxilia o entendimento</strong> de quem o pega depois de feito.</p>
+				</div>
+			</div>
+		</section>
+
 		<section class="id-class-name">
 			<p>
-				<a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+				<a class="btn btn-primary" data-bs-toggle="collapse" href="#id-class-name-text" role="button" aria-expanded="false" aria-controls="id-class-name-text">
 					ID, classes e nome
 				</a>
 			</p>
-			<div class="collapse" id="collapseExample">
+			<div class="collapse" id="id-class-name-text">
 				<div class="card card-body">
 					<p>Esses três são <strong>atributos</strong>. Basicamente servem para <strong>identificar</strong> as tags.</p>
 	
@@ -171,12 +220,217 @@
 			</div>
 		</section>
 
+		<section class="form">
+			<p>
+				<a class="btn btn-primary" data-bs-toggle="collapse" href="#form-text" role="button" aria-expanded="false" aria-controls="form-text">
+					Form
+				</a>
+			</p>
+			<div class="collapse" id="form-text">
+				<div class="card card-body">
+					<p>As tags <strong>&lt;form&gt;&lt;/form&gt;</strong> indicam que tudo o que estiver dentro delas faz parte de um <strong>formulário</strong>. Não tem segredo nisso, é bem autoexplicativo.</p>
+
+					<h3>Input</h3>
+
+					<p>Como um formulário é composto por <strong>campos</strong> (espaços) em que as pessoas podem colocar os <strong>dados</strong> que a página pede (ex: nome, número de celular, endereço etc.). Para criar esses campos existe a tag <strong>&lt;input&gt;</strong>. Input pode ser traduzido como "inserir", então elas servem para inserir vários tipos de dados diferentes dentro de um <strong>&lt;form&gt;&lt;/form&gt;</strong>.</p>
+
+					<p>Sozinha, a tag <strong>&lt;input&gt;</strong> não faz muita coisa. Mas um atributo muito imporante para ela é o <strong>type=""</strong> que significa tipo, idicando exatamente o tipo de campo que deve aparecer:</p>
+
+					<hr>
+
+					<code>&lt;input type=""&gt;</code>
+
+					<hr>
+
+					<p>Por <strong>padrão</strong> o tipo é <strong>"text"</strong> (texto), por isso se colocarmos <strong>&lt;input&gt;</strong> sem mais nada escrito, o campo automaticamente poderá receber qualquer tipo de texto (letras, números, símbolos etc.):</p>
+
+					<hr>
+
+					<code>&lt;input type="text"&gt;</code>
+					
+					<p>Vira:</p>
+
+					<input type="text">
+
+					<hr>
+					
+					<p>Porém existem <strong>vários outros types</strong>, como:</p>
+					
+					<ol>
+						<li>
+							<p><strong>"number"</strong>: para números, mostra duas setinhas para a pessoa mudar os números sem precisar digitar (mas pode):</p>
+							
+							<hr>
+
+							<code>&lt;input type="number"&gt;</code>
+
+							<p>Vira:</p>
+
+							<input type="number">
+							
+							<hr>
+
+							<p>Outro atributo muito interessante para o <strong>&lt;input type="number"&gt;</strong> é o <strong>step=""</strong>. Pode ser traduzido como "passo" ou "intervalo", sendo o <strong>intervalo</strong> pelo qual as setas desse tipo de input <strong>altera o valor</strong> (que por <strong>padrão é 1</strong>):</p>
+
+							<hr>
+
+							<code>&lt;input type="number" step="0.5"&gt; &lt;!-- Usando as setas, o número será alterado de 0.5 em 0.5 --&gt;</code>
+
+							<p>Vira:</p>
+
+							<input type="number" step="0.5">
+
+							<hr>
+
+							<p><sup><strong>Obs:</strong> lembrando que <strong>números decimais</strong> (tipo 0,5) para as linguagens sempre é usado <strong>ponto</strong> (.) no lugar de <strong>vírgula</strong> (,). Por isso usamos <strong>0.5</strong> e <strong>não 0,5</strong> no step="".</sup></p>
+						</li>
+						
+						<li>
+							<p><strong>"button"</strong>: um botão genérico que também precisa do atributo <strong>value=""</strong> (valor) para o usuário não ver algo vazio:</p>
+							
+							<hr>
+
+							<code>&lt;input type="button" value="Exemplo"&gt;</code>
+
+							<p>Vira:</p>
+
+							<input type="button" value="Exemplo">
+							
+							<hr>
+						</li>
+						
+						<li>
+							<p><strong>"checkbox"</strong>: caixinhas que podem ser assinaladas ao mesmo tempo:</p>
+							
+							<hr>
+
+							<code>
+								&lt;input type="checkbox"&gt;<br>
+								&lt;input type="checkbox"&gt;<br>
+								&lt;input type="checkbox"&gt;
+							</code>
+
+							<p>Vira:</p>
+
+							<label for="checkEx1"><input type="checkbox" id="checkEx1"> Exemplo</label><br>
+							<label for="checkEx2"><input type="checkbox" id="checkEx2"> Exemplo</label><br>
+							<label for="checkEx3"><input type="checkbox" id="checkEx3"> Exemplo</label>
+							
+							<hr>
+						</li>
+						
+						<li>
+							<p><strong>"radio"</strong>: um círculo que, no caso de existirem várias opções, somente um deve ser selecionado. Para isso, o atributo <strong>name=""</strong> deve ser o mesmo para todos:</p>
+							
+							<hr>
+
+							<code>
+								&lt;input type="radio" name="teste"&gt; Exemplo<br>
+								&lt;input type="radio" name="teste"&gt; Exemplo<br>
+								&lt;input type="radio" name="teste"&gt; Exemplo
+							</code>
+
+							<p>Vira:</p>
+
+							<label for="radioEx1"><input type="radio" name="teste" id="radioEx1"> Exemplo</label><br>
+							<label for="radioEx2"><input type="radio" name="teste" id="radioEx2"> Exemplo</label><br>
+							<label for="radioEx3"><input type="radio" name="teste" id="radioEx3"> Exemplo</label>
+							
+							<hr>
+						</li>
+
+						<li>
+							<p><strong>"date"</strong>: um campo pequeno que, quando clicado, mostra um calendário para inserir uma data:</p>
+							
+							<hr>
+
+							<code>&lt;input type="date"&gt;</code>
+
+							<p>Vira:</p>
+
+							<input type="date">
+							
+							<hr>
+
+							<p><sup><strong>Obs:</strong> o texto dentro de um type="date" dd/mm/yyyy (ou mm/dd/yyyy) significa day/month/year (dia/mês/ano).</sup></p>
+						</li>
+
+						<li>
+							<p><strong>"submit"</strong>: significa "enviar" e simplesmente envia os valores inseridos no formulário para o lugar definido (vou falar disso mais à frente). Também aceita <strong>value=""</strong> para o texto dentro dele:</p>
+							
+							<hr>
+
+							<code>&lt;input type="submit" value="Enviar"&gt;</code>
+
+							<p>Vira:</p>
+
+							<input type="submit" value="Enviar">
+							
+							<hr>
+						</li>
+
+						<li>
+							<p><strong>"reset"</strong>: apaga os valores colocados dentro dos campos dos formulários (o que foi inserido alí na hora, não altera o banco de dados). Também aceita <strong>value=""</strong> para o texto dentro dele:</p>
+							
+							<hr>
+
+							<code>&lt;input type="reset" value="Apagar"&gt;</code>
+
+							<p>Vira:</p>
+
+							<input type="reset" value="Apagar">
+							
+							<hr>
+						</li>
+					</ol>
+
+					<p>Para saber todos os tipos que existem, é só pesquisar (para isso recomendo o site da <a href="https://developer.mozilla.org/pt-BR/" target="_blank">Mozilla</a>, criadora do Firefox; e da <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>), mas também é possível usar uma funcionalidade muito útil do <a href="https://code.visualstudio.com/" target="_blank">VS Code</a> (meu editor favorito e o que mais recomendo) apertando <strong>Ctrl + Espaço</strong> no teclado <strong>Windows</strong> ou <strong>command (⌘) + Espaço</strong> no teclado <strong>Mac</strong> dentro das aspas de <strong>type=""</strong>. Isso faz aparecer uma <strong>janela pequena</strong> ao lado do texto com todas as <strong>opções disponíveis</strong> naquela linguagem. A mesma coisa funciona para <strong>qualquer lugar do código</strong>, não só para type="".</p>
+
+					<h3>Action e Method</h3>
+
+					<p>Esses dois atributos são bem simples e vão dentro da tag de abertura <strong>&lt;form&gt;</strong>:</p>
+
+					<hr>
+
+					<code>
+						<strong>
+							&lt;form action="" method=""&gt;<br><br>
+							
+							&lt;/form&gt;
+						</strong>
+					</code>
+
+					<hr>
+
+					<p><strong>action=""</strong> serve para indicar a <strong>ação</strong> que o <strong>&lt;input type="submit"&gt;</strong> fará quando enviar os dados. Mais especificamente para onde os dados serão enviados, como para um arquivo php:</p>
+
+					<hr>
+
+					<code>&lt;form action="arquivo.php"&gt;</code>
+
+					<hr>
+
+					<p>Já <strong>method=""</strong> diz qual <strong>método</strong> o arquivo utilizará para <strong>realizar o action</strong>. Existem dois valores possíveis: <strong>"get"</strong> e <strong>"post"</strong>; mas por enquanto vamos ficar só com <strong>"get"</strong> que pode ser traduzido como "pegar". Isso permite que o (exemplo) do arquivo PHP pegue os dados do formulário.</p>
+					
+					<p>Method e action <strong>não podem ser colocados sem o outro</strong>. A tag ficaria assim:</p>
+
+					<hr>
+
+					<code>&lt;form action="arquivo.php" method="get"&gt;</code>
+
+					<hr>
+					
+					</form>
+				</div>
+			</div>
+		</section>
+
 	</main>
 
 	<footer>
 		<p class="repository">Para visualizar o repositório onde está o <strong>código</strong> deste site, <a href="https://github.com/o-Patrick/ensina-dev" target="_blank">clique aqui</a>!</p>
 	</footer>
 
-	<script src="../assets/bootstrap.min.js"></script>
+	<script src="../assets/js/bootstrap.min.js"></script>
 </body>
 </html>
