@@ -168,13 +168,13 @@
 
 					<code>
 						&lt;body&gt;<br>
-						&nbsp;&nbsp;&lt;p&gt;Texto que aparece na página porque não está em um comentário&lt;/p&gt;<br>
-						&nbsp;&nbsp;&lt;!--<br>
-						&nbsp;&nbsp;&nbsp;&nbsp;Texto que NÃO aparece na página porque está em um comentário.<br>
-						&nbsp;&nbsp;&nbsp;&nbsp;A diferença é que essa linha também não aparece por também estar dentro de um comentário.<br>
-						&nbsp;&nbsp;&nbsp;&nbsp;Nem essa.<br> <br>
-						&nbsp;&nbsp;&nbsp;&nbsp;Essa aqui também não!<br>
-						&nbsp;&nbsp;--&gt;<br>
+							&nbsp;&nbsp;&lt;p&gt;Texto que aparece na página porque não está em um comentário&lt;/p&gt;<br>
+							&nbsp;&nbsp;&lt;!--<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;Texto que NÃO aparece na página porque está em um comentário.<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;A diferença é que essa linha também não aparece por também estar dentro de um comentário.<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;Nem essa.<br> <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;Essa aqui também não!<br>
+							&nbsp;&nbsp;--&gt;<br>
 						&lt;/body&gt;<br>
 					</code>
 
@@ -182,7 +182,7 @@
 
 					<p>O restultado dos dois códigos é esse:</p>
 
-					<img src="../assets/img/commentary-test.PNG" class="smallImg" alt="Teste de comentário">
+					<img src="../assets/img/commentary-test-html.PNG" class="smallImg" alt="Teste de comentário">
 
 					<p>Essa mecânica é <strong>importante</strong> para <strong>documentar</strong> o que acontece no seu código, para que <strong>não esqueça</strong> de detalhes e também <strong>auxilia o entendimento</strong> de quem o pega depois de feito.</p>
 				</div>
@@ -427,6 +427,39 @@
 					<hr>
 					
 					</form>
+				</div>
+			</div>
+		</section>
+
+		<section class="semantics">
+			<p>
+				<a class="btn btn-primary" data-bs-toggle="collapse" href="#semantics-text" role="button" aria-expanded="false" aria-controls="semantics-text">
+					Semântica
+				</a>
+			</p>
+			<div class="collapse" id="semantics-text">
+				<div class="card card-body">
+					<p>Essa aqui é basicamente <strong>a razão da existência de HTML5</strong>. Até o <strong>HTML4</strong> era comum que o próprio <strong>HTML</strong> tivesse tags que permitissem <strong>alterar os estilos</strong> dos elementos das páginas, porém isso foi <strong>caindo em desuso</strong> principalmente com a vinda do <strong>HTML5</strong>. Atualmente, essa <strong>função de estilização pertence ao CSS</strong> e, por mais que navegadores ainda possam aplicar essas <strong>tags HTML depreciadas</strong> (antigas, atrasadas), o correto é não utilizá-las, mas sim as <strong>CSS</strong>.</p>
+
+					<p>Certo, mas para que então serve <strong>HTML5</strong>? Como vimos anteriormente, <strong>HTML é uma linguagem de marcação de texto</strong>. Como os estilos dessa linguagem devem deixar de ser utilizados, então a <strong>função</strong> dela se mantém (firme e forte) a de <strong>marcação</strong>. E é aí que entra o título desse texto: a <strong>semântica</strong>.</p>
+
+					<p><strong>Semântica</strong> é a mesma coisa que <strong>significado</strong>. Todas as tags HTML tem um significado, até mesmo uma genérica tipo <strong>&lt;div&gt;&lt;/div&gt;</strong> (que significa qualquer tipo de divisória). Por isso, todo mundo que desenvolve utilizando <strong>HTML</strong> deve ter uma <strong>atenção especial</strong> com o que digita, mesmo que aquilo <strong>não seja visto</strong> por quem usa o programa.</p>
+
+					<p>É bem <strong>fácil de compreender</strong> a semântica das tags já que elas geralmente tem <strong>nomes</strong> que deixam isso claro, como <strong>&lt;img&gt;</strong> para imagens, <strong>&lt;p&gt;&lt;/p&gt;</strong> para parágrafos, ou a já citada <strong>&lt;div&gt;&lt;/div&gt;</strong>. Porém existem outras, por exemplo, similares à <strong>&lt;div&gt;&lt;/div&gt;</strong>, que <strong>também não tem um efeito visual</strong>, mas que servem para deixar seu <strong>código mais profissional</strong>.</p>
+
+					<p>Um exemplo desse tipo de tag é a <strong>&lt;section&gt;&lt;/section&gt;</strong> que, repetindo, tem <strong>quase</strong> a mesma função que <strong>&lt;div&gt;&lt;/div&gt;</strong> (principalmente no visual), porém diz ao navegador que aquela é uma <strong>seção de conteúdo com mais significado</strong>. É usada simplesmente assim:</p>
+
+					<hr>
+
+					<code>
+						&lt;section&gt;<br>
+						&nbsp;&nbsp;&lt;p&gt;Aqui pode colocar qualquer tipo de conteúdo normalmente, o parágrado é só um exemplo&lt;/p&gt;<br>
+						&lt;/section&gt;
+					</code>
+
+					<hr>
+
+					<p>Seguindo a mesma linha de <strong>&lt;section&gt;&lt;/section&gt;</strong>, existe <strong>&lt;aside&gt;&lt;/aside&gt;</strong> para qualquer tipo de <strong>conteúdo "extra"</strong> do site, como aquelas partes menores nos cantos com menus e coisas do tipo ou até um trecho realmente extra depois do seu principal. Falando em principal, uma tag que também é similar, mas agora para definir o <strong>conteúdo principal</strong>, é <strong>&lt;main&gt;&lt;/main&gt;</strong>. Só para dar mais um exemplo, existe <strong>&lt;footer&gt;&lt;/footer&gt;</strong> para o <strong>rodapé</strong> da página, aquele lugar no final que geralmente tem "Quem somos", "SAC", um telefone ou qualquer outro tipo de informação que o proprietário ache útil.</p>
 				</div>
 			</div>
 		</section>

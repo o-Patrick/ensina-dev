@@ -46,11 +46,11 @@
 
 		<section class="basic">
 			<p>
-				<a class="btn btn-primary" data-bs-toggle="collapse" href="#basic" role="button" aria-expanded="false" aria-controls="collapseExample">
+				<a class="btn btn-primary" data-bs-toggle="collapse" href="#basic-text" role="button" aria-expanded="false" aria-controls="basic-text">
 					Básico
 				</a>
 			</p>
-			<div class="collapse" id="basic">
+			<div class="collapse" id="basic-text">
 				<div class="card card-body">
 					<p><strong>CSS</strong> também não é linguagem de programação, nem de marcação, mas sim de <strong>folhas de estilo</strong>. Isso significa basicamente que ela serve para <strong>aplicar estilos aos elementos</strong> de uma página. Ou seja, deixar nosso site bonito.</p>
 
@@ -125,13 +125,62 @@
 			</div>
 		</section>
 
+		<section class="commentary">
+			<p>
+				<a class="btn btn-primary" data-bs-toggle="collapse" href="#commentary-text" role="button" aria-expanded="false" aria-controls="commentary-text">
+					Comentários
+				</a>
+			</p>
+			<div class="collapse" id="commentary-text">
+				<div class="card card-body">
+					<p>Os códigos não são feitos só do conteúdo que será realmente usado na execução do programa. Também é possível fazer anotações que só poderão ser vistas no código, não na página ou aplicativo em si. Isso é feito com símbolos específicos e mudam de linguagem para linguagem. No caso de CSS, comentários são feitos entre /* e */. Por exemplo:</p>
+
+					<hr>
+	
+					<code>/* Texto que NÃO é considerado no estilo da página porque está em um comentário */</code>
+
+					<hr>
+						
+					<p>É claro que no caso de um comentário mais longo de várias linhas, seria difícil fazer a mesma coisa para todas. Portanto, é só utilizar os mesmos símbolos e apertar Enter como faria normalmente em um texto:</p>
+
+					<hr>
+
+					<code>
+						/*<br>
+						&nbsp;&nbsp;Texto que NÃO é considerado no estilo da página porque está em um comentário.<br>
+						&nbsp;&nbsp;A diferença é que essa linha também não aparece por também estar dentro de um comentário.<br>
+						&nbsp;&nbsp;Nem essa.<br> <br>
+						&nbsp;&nbsp;Essa aqui também não!<br>
+						*/
+					</code>
+
+					<hr>
+
+					<p>Ou seja, posso ter o código:</p>
+
+					<hr>
+
+					<code>
+						body{<br>
+						&nbsp;&nbsp;background-color: yellow;<br>
+						&nbsp;&nbsp;/* color: white; */<br>
+						}
+					</code>
+
+					<hr>
+
+					<p>Que a página não aplicará ao texto a cor branca porque a propriedade está comentada.</p>
+				</div>
+			</div>
+		</section>
+
 		<section class="link">
 			<p>
-				<a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+				<a class="btn btn-primary" data-bs-toggle="collapse" href="#link-text" role="button" aria-expanded="false" aria-controls="link-text">
 					Certo, mas onde fica o CSS?
 				</a>
 			</p>
-			<div class="collapse" id="collapseExample">
+			<div class="collapse" id="link-text">
 				<div class="card card-body">
 					<p>Existem <strong>três formas de aplicar o CSS</strong> no seu HTML: <strong>inline</strong>, <strong>interno</strong> e <strong>externo</strong>.</p>
 
@@ -250,11 +299,11 @@
 
 		<section class="cascade">
 			<p>
-				<a class="btn btn-primary" data-bs-toggle="collapse" href="#cascade" role="button" aria-expanded="false" aria-controls="collapseExample">
+				<a class="btn btn-primary" data-bs-toggle="collapse" href="#cascade-text" role="button" aria-expanded="false" aria-controls="cascade-text">
 					Cascata
 				</a>
 			</p>
-			<div class="collapse" id="cascade">
+			<div class="collapse" id="cascade-text">
 				<div class="card card-body">
 					<p><strong>CSS</strong> significa <strong>Folhas de Estilo em Cascata (Cascading Styles Sheets)</strong>. Folhas de estilos já entendemos que são a <strong>aparência dos elementos</strong>. Mas o que significa <strong>"em cascata"</strong>? É bem simples, só lembrar de uma cachoeira. A água vem de cima e cai sobre tudo o que estiver abaixo dela. CSS<strong> funciona da mesma forma:</strong> o que é aplicado em um elemento, também é aplicado em tudo que estiver <strong>dentro</strong> dele.</p>
 

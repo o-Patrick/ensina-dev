@@ -118,6 +118,31 @@ Certo, mas onde fica o CSS?
 	
 	Porém não é crime usar o interno, contanto que sejam poucas declarações ou até mesmo um exercício pequeno no qual quer testar alguma coisa. Já o inline é o caso mais específico de todos, porque ele não está sendo aplicado somente dentro daquele documento, mas também dentro de um ÚNICO ELEMENTO, então se quiser vários parágrafos com aquele estilo, é necessário fazer a mesma coisa para todos. Pois é...
 
+Comentários
+
+	Os códigos não são feitos só do conteúdo que será realmente usado na execução do programa. Também é possível fazer anotações que só poderão ser vistas no código, não na página ou aplicativo em si. Isso é feito com símbolos específicos e mudam de linguagem para linguagem. No caso de CSS, comentários são feitos entre /* e */. Por exemplo:
+	
+	/* Texto que NÃO é considerado no estilo da página porque está em um comentário */
+		
+	É claro que no caso de um comentário mais longo de várias linhas, seria difícil fazer a mesma coisa para todas. Portanto, é só utilizar os mesmos símbolos e apertar Enter como faria normalmente em um texto:
+
+	/*
+		Texto que NÃO é considerado no estilo da página porque está em um comentário.
+		A diferença é que essa linha também não aparece por também estar dentro de um comentário.
+		Nem essa.
+
+		Essa aqui também não!
+	*/
+
+	Ou seja, posso ter o código:
+
+	body{
+		background-color: yellow;
+		/* color: white; */
+	}
+
+	Que a página não aplicará ao texto a cor branca porque a propriedade está comentada.
+
 Cascata
 
 	CSS significa Folhas de Estilo em Cascata (Cascading Styles Sheets). Folhas de estilos já entendemos que são a aparência dos elementos. Mas o que significa "em cascata"? É bem simples, só lembrar de uma cachoeira. A água vem de cima e cai sobre tudo o que estiver abaixo dela. CSS funciona da mesma forma: o que é aplicado em um elemento, também é aplicado em tudo que estiver DENTRO dele.
