@@ -230,7 +230,10 @@
 
 					<p>Os parâmetros não vêm do nada, eles <strong>recebem variáveis</strong> que guardam um valor que você quer usar <strong>dentro da função</strong>. Essa passagem é feita na <strong>ordem</strong>, então meu <strong>primeiro parâmetro em costura($bracos, $torço, $ombros, $cintura)</strong>, sempre corresponde ao <strong>primeiro em function costura ($bra, $tor, $omb, $cin)</strong>, assim como o segundo na chamada corresponde ao segundo na declaração de função e assim por diante. Sei como é confuso isso de passagem de valor entre variáveis e parâmetros e talvez essa imagem ajude:</p>
 
-					<img src="../assets/img/php/params.PNG" class="smallImg2">
+					<picture>
+						<source media="(max-width: 680px)" srcset="../assets/img/php/params-s.jpg" type="image/jpeg">
+						<img src="../assets/img/php/params.PNG" class="smallImg2">
+					</picture>
 					
 					<p>Repare que usei o nome inteiro nas variáveis (ex: $bracos), enquanto os parâmetros que recebem aquele valor tem uma versão encurtada, isso porque eles <strong>não podem ter o mesmo nome</strong>. Então se declarei um <strong>parâmetro $media</strong>, não posso ter <strong>outro</strong> na mesma função chamado <strong>$media</strong>; ou se declarei uma <strong>variável $media</strong>, <strong>não</strong> posso ter um <strong>parâmetro $media</strong> (pode até funcionar em certos casos, mas é bom não causar confusão para quem vai ler o código depois). Também não é obrigatório ser o nome encurtado, pode ser o que quiser, só é importante fazer sentido.</p>
 
