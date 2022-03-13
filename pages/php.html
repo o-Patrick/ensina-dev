@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/style.css">
+	<title>Ensina Dev CSS3</title>
+</head>
+<body>
+
+	<header>
+		<h1 class="logo"><a href="../index.html" target="_self">Ensina Dev</a></h1>
+		<p class="author">Por <a href="https://github.com/o-Patrick" target="_blank">Patrick Fernandes Leme</a></p>
+	</header>
+	
+	<main>
+		<!-- Corpo padrão
+	
+		<strong>&lt;&gt;</strong>
+	
+		<p>
+			<a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+				Link with href
+			</a>
+		</p>
+		<div class="collapse" id="collapseExample">
+			<div class="card card-body">
+				Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+			</div>
+		</div>
+		-->
+
+		<h2>PHP</h2>
+
+		<section class="functions">
+			<p>
+				<a class="btn btn-primary" data-bs-toggle="collapse" href="#functions-text" role="button" aria-expanded="false" aria-controls="functions-text">
+					Funções
+				</a>
+			</p>
+			<div class="collapse" id="functions-text">
+				<div class="card card-body">
+
+					<p>Normalmente é necessário fazer um código em que algumas linhas serão repetidas várias vezes (o que significa que essas linhas são iguais). Para que não seja necessário ficar copiando e colando ou muito menos digitando tudo novamente, podemos usar <strong>Funções</strong>.</p>
+
+					<p>Mas o que são <strong>Funções</strong>? Elas são pedaços de código que ficam em um lugar específico, mas que podem ser <strong>chamadas</strong> quantas vezes e em quantos lugares precisar. Quando a chamada é feita, não é necessário digitar tudo de novo porque é como se todas aquelas linhas fossem <strong>transportadas só pela chamada</strong>. Vamos à prática com a estrutura básica de uma função em PHP:</p>
+
+					<hr>
+
+					<code>
+						function nome (parâmetros) {<br>
+						&nbsp;&nbsp;// Aqui dentro é onde vão todas as linhas que precisariamos repetir<br>
+						}<br>
+					</code>
+
+					<hr>
+
+					<p><sup><strong>Obs:</strong> lembrando que // em PHP indica comentário!</sup></p>
+
+					<ol>
+						<li>A palavra <strong>function</strong> é obrigatória e fixa. É ela que indica que será criada uma função alí.</li>
+
+						<li>Onde está escrito <strong>nome</strong> é onde se coloca o nome da função, que pode ser qual nós quisermos (contanto que não tenha espaços, por exemplo: nomeDaFuncao é válido, enquanto nome da funcao não é). Também existem <strong>funções anônimas</strong> (sem um nome), mas isso só é usado em casos únicos e não serão necessárias por enquanto.</li>
+
+						<li>Os <strong>parênteses</strong> logo depois do nome são obrigatórios e servem para indicar se tem parâmetros ou não. Os <strong>parâmetros</strong> em si não são obrigatórios e vamos falar mais para frente.</li>
+
+						<li>Logo depois dos parênteses vêm <strong>{</strong> e <strong>}</strong> (as chaves) e dentro delas é colocado todo o código que se quer repetir.</li>
+
+						<li>A <strong>chamada</strong> é feita só repetindo o nome da função (que deve estar exatamente igual) seguido dos parênteses (com ou sem os parâmetros):</li>
+
+					</ol>
+
+					<hr>
+
+					<code>
+						nome(parâmetros);<br><br>
+
+						function nome (parâmetros) {<br>
+						&nbsp;&nbsp;// Aqui dentro é onde vão todas as linhas que precisariamos repetir<br>
+						}<br>
+					</code>
+
+					<hr>
+
+					<p>Agora vamos fazer uma <strong>analogia</strong>. Imagine que você trabalha em uma empresa e que todas as pessoas que trabalham alí precisem de um <strong>cartão</strong> próprio para entrar no prédio. O cartão de todo mundo funciona de <strong>forma parecida</strong>. Ele é eletrônico e quando <strong>aproximado da catraca</strong>, é lido e a pessoa é <strong>autorizada</strong> a entrar. Para que existisse algum tipo de controle de entradas caso não existisse o cartão, seria preciso fazer um registro para cada uma das pessoas todas as vezes que entrassem no edifício, o que não é nada prático e só atrapalharia todo mundo. Mas para que não seja necessária essa repetição, o cartão foi feito de uma forma igual para todo mundo e a autenticação é feita de uma forma simples (o próprio cartão).</p>
+
+					<p>Aplicando isso à ideia de uma função:</p>
+
+					<hr>
+
+					<code>
+						function autenticacao(){<br>
+						&nbsp;&nbsp;// Quando for aproximado da catraca, a passagem é liberada;<br>
+						}<br>
+					</code>
+
+					<hr>
+
+					<p>O processo de autenticação (a utilidade do cartão) é um <strong>processo repetido por todas as pessoas</strong> que entram no prédio. Para não precisar ser criado um novo registro todas as vezes, os cartões tem a <strong>function autenticacao()</strong> dentro de si.</p>
+
+					<p>Mas como sabemos, não basta só o cartão ter a função dentro dele, as pessoas também precisam <strong>encostá-lo na catraca</strong>, ou seja, fazer a <strong>chamada da função</strong> junto à catraca. A representação em código da chamada seria essa:</p>
+
+					<hr>
+
+					<code>
+						autenticacao();
+					</code>
+
+					<hr>
+
+					<p>E é exatamente por meio da <strong>chamada</strong> que todo o processo da <strong>function autenticacao()</strong> é <strong>repetido</strong> sem precisar repetir as linhas dentro dela todas as vezes.</p>
+
+					<p>A mesma coisa é um código. Se precisamos autenticar um usuário no login, não faria sentido repetir as linhas que fazem isso a cada usuário, é só fazer a chamada da <strong>função</strong> que o processo (ou <strong>rotina</strong>) é "transportado" e cada usuário entra de forma simples.</p>
+
+					<h3>Return</h3>
+
+					<p>Quando usamos uma função é porque queremos algum tipo de <strong>resultado</strong> sem precisar repetir a mesma parte de código, porém as funções <strong>não conseguem saber</strong> exatamente qual o <strong>valor</strong> desse resultado; ainda mais pensando que não existe limite para usar dados dentro de uma função e, mesmo que só exista um, é necessário <strong>deixar claro</strong> o que deve ser retornado. É exatamente essa a função do <strong>return</strong>. Como o nome diz, ele serve para <strong>retornar algo</strong>. Mas o quê? Como já dito, uma <strong>variável</strong> ou um simples <strong>valor</strong>. Ainda no caso do cartão de autenticação, fazemos isso (só adicionando um IF/ELSE):</p>
+					
+					<hr>
+
+					<code>
+						function autenticacao(){<br><br>
+
+						&nbsp;&nbsp;$pessoa = "registrada";<br><br>
+
+						&nbsp;&nbsp;if ($pessoa == "registrada"){<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;$liberada = true;<br>
+						&nbsp;&nbsp;} else {<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;$liberada = false;<br>
+						&nbsp;&nbsp;}<br><br>
+
+						&nbsp;&nbsp;return $liberada;<br><br>
+
+						}<br>
+					</code>
+					
+					<hr>
+
+					<p>Nesse exemplo foi declarada a <strong>variável $liberada</strong> para confirmar se a pessoa poderá entrar ou não. Portanto se a pessoa estiver registrada no sistema, $liberada recebe o valor <strong>true</strong> (verdadeiro) e ela <strong>pode entrar</strong>; se não estiver registrada, a variável recebe o valor <strong>false</strong>, o que impede a entrada. Mas como já disse, por mais que só tenha uma variável, a função <strong>não sabe sozinha</strong> o que fazer, por isso é usado o comando <strong>return $liberada</strong> para deixar claro que será <strong>retornado</strong> o valor dentro da variável $liberada, seja ele true ou false.</p>
+					
+					<p>Também poderia ser um <strong>valor sem uma variável</strong> (por exemplo: só dizer return true ou return false):</p>
+
+					<hr>
+
+					<code>
+						function autenticacao(){<br><br>
+
+							&nbsp;&nbsp;$pessoa = "registrada";<br><br>
+							
+							&nbsp;&nbsp;if ($pessoa == "registrada"){<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;return true;<br>
+							&nbsp;&nbsp;} else {<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;return false;<br>
+							&nbsp;&nbsp;}<br><br>
+
+						}<br>
+					</code>
+
+					<hr>
+
+					<p>Diria, inclusive, que essa última solução é <strong>melhor</strong>, já que é uma função simples e deixa o código menor, além de não criar uma outra variável sem necessidade.</p>
+
+					<p>Um porém é que <strong>return</strong> não deve ser usado de qualquer jeito, já que a <strong>função é parada</strong> quando o código chega nele:</p>
+
+					<hr>
+
+					<code>
+						function autenticacao(){<br><br>
+
+							&nbsp;&nbsp;$pessoa = "registrada";<br><br>
+							
+							&nbsp;&nbsp;if ($pessoa == "registrada"){<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;return true;<br>
+							&nbsp;&nbsp;} else {<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;return false;<br>
+							&nbsp;&nbsp;}<br><br>
+
+							&nbsp;&nbsp;echo "Fim da função!";<br><br>
+
+						}<br>
+					</code>
+
+					<hr>
+
+					<p>O funcionamento dessa função parece claro: passando pelo IF/ELSE, o código verifica se a pessoa está registrada ou não, o resultado é retornado e, por fim, é escrita na tela a frase Fim da função! utilizando um echo. Correto? É óbvio que se estivesse eu não teria perguntado, né... A verificação com IF/ELSE ocorre normalmente, como já vimos anteriormente. Porém o echo "Fim da função!" simplesmente não acontecesse, porque <strong>ou</strong> a pessoa está registrada e é <strong>retornado</strong> true e ela passa, <strong>ou</strong> ela não está registrada e é <strong>retornado</strong> false. Independente da ocorrência, o <strong>return sempre é usado antes do echo</strong>, e como <strong>return encerra a função</strong>, tudo o que estiver <strong>depois</strong> dele na rotina é simplesmente ignorado. Por isso tenha cuidado na hora de retornar!</p>
+
+					<h3>Parâmetros</h3>
+
+					<p>Imagine uma pessoa que vai a uma loja de roupas comprar um terno. Existem peças com as medidas já prontas, porém pode ser preferível que seja feito outro conjunto sob medida, já que as pessoas possuem corpos diferentes. Para fazer esse conjunto, o alfaiate precisa pegar as <strong>medidas do corpo</strong> da cliente usando uma fita métrica. Com ela, o alfaiate consegue as medidas dos <strong>braços</strong>, <strong>torço</strong>, <strong>ombros</strong>, <strong>cintura</strong> e das <strong>outras partes</strong> do corpo, ou seja, ele pega todos os <strong>parâmetros necessários</strong> para fazer o terno novo. <strong>Parâmetros são isso:</strong> valores (nesse caso as medidas do corpo) que serão usados como base para outra coisa (o terno novo). Tranformando isso em uma função com parâmetros (que vão dentro dos parênteses no início da declaração de função e separados por vírgula):</p>
+
+					<hr>
+
+					<code>
+						function costura ($bra, $tor, $tor, $cin){<br>
+							&nbsp;&nbsp;// código<br>
+						}<br>
+					</code>
+
+					<hr>
+					
+					<p>Não sei o limite de parâmetros que uma função pode receber em PHP, mas <strong>não é necessário se preocupar</strong> com isso; pode não haver nenhum ou até mesmo muitos parâmetros ao mesmo tempo.</p>
+
+					<p>Assim como <strong>sem o return</strong> a função não sabe sozinha o que mandar de volta, ela também não sabe magicamente <strong>a que se referem esses parâmet</strong>ros. Para isso, as <strong>variáveis</strong> que queremos passar vão <strong>dentro da chamada</strong>:</p>
+
+					<hr>
+
+					<code>
+						// variáveis<br>
+						$bracos = 1;<br>
+						$torço = 0,7;<br>
+						$ombros = 0,5;<br>
+						$cintura = 0,4;<br><br>
+
+						// chamada<br>
+						costura($bracos, $torço, $ombros, $cintura);<br><br>
+
+						// função<br>
+						function costura ($bra, $tor, $omb, $cin){<br><br>
+
+							&nbsp;&nbsp;$ternoNovo = $bra + $tor + $omb + $cin;<br><br>
+
+							&nbsp;&nbsp;return $ternoNovo;<br><br>
+
+						}<br>
+					</code>
+
+					<hr>
+
+					<p>Os parâmetros não vêm do nada, eles <strong>recebem variáveis</strong> que guardam um valor que você quer usar <strong>dentro da função</strong>. Essa passagem é feita na <strong>ordem</strong>, então meu <strong>primeiro parâmetro em costura($bracos, $torço, $ombros, $cintura)</strong>, sempre corresponde ao <strong>primeiro em function costura ($bra, $tor, $omb, $cin)</strong>, assim como o segundo na chamada corresponde ao segundo na declaração de função e assim por diante. Sei como é confuso isso de passagem de valor entre variáveis e parâmetros e talvez essa imagem ajude:</p>
+
+					<img src="../assets/img/php/params.PNG" class="smallImg2">
+					
+					<p>Repare que usei o nome inteiro nas variáveis (ex: $bracos), enquanto os parâmetros que recebem aquele valor tem uma versão encurtada, isso porque eles <strong>não podem ter o mesmo nome</strong>. Então se declarei um <strong>parâmetro $media</strong>, não posso ter <strong>outro</strong> na mesma função chamado <strong>$media</strong>; ou se declarei uma <strong>variável $media</strong>, <strong>não</strong> posso ter um <strong>parâmetro $media</strong> (pode até funcionar em certos casos, mas é bom não causar confusão para quem vai ler o código depois). Também não é obrigatório ser o nome encurtado, pode ser o que quiser, só é importante fazer sentido.</p>
+
+					<h4>Escopo de parâmetros</h4>
+					
+					<p>Outro detalhe importante é que os parâmetros só funcionam <strong>dentro da função</strong> à qual eles fazem parte. Então quando é declarado:</p>
+
+					<hr>
+
+					<code>
+						function costura ($bra, $tor){<br>
+							&nbsp;&nbsp;// código<br>
+						}<br>
+					</code>
+
+					<hr>
+
+					<p>Os parâmetros <strong>$bra</strong> e <strong>$tor</strong> só funcionam <strong>dentro da função costura()</strong>. Se for declarada outra:</p>
+
+					<hr>
+
+					<code>
+						function entrega (){<br>
+							&nbsp;&nbsp;// código<br>
+						}<br>
+					</code>
+
+					<hr>
+
+					<p>Não será possível usar <strong>$bra</strong> e <strong>$tor</strong> novamente porque o <strong>escopo</strong> (alcance) dos parâmetros é só aquela função, então parâmetros possuem <strong>escopo local</strong> ou <strong>escopo de bloco</strong> (diferente de <strong>escopo global</strong>, que funciona no código todo).</p>
+
+					<p>Isso garante que a memória do computador não seja ocupada <strong>sem necessidade</strong> e o código fica <strong>mais organizado</strong>, já que $bra e $tor funcionam somente dentro de costura(), significando que eles <strong>não existem no resto do código</strong> e ainda podem ser <strong>"redeclarados"</strong> para outras funções tipo entrega(), <strong>sem dar erro</strong> por usar o mesmo nome:</p>
+
+					<hr>
+
+					<code>
+						function costura ($bra, $tor){<br>
+							&nbsp;&nbsp;// código<br>
+						}<br><br>
+						function entrega ($bra, $tor){<br>
+							&nbsp;&nbsp;// código<br>
+						}<br>
+					</code>
+
+					<hr>
+
+					<p>Só não pode esquecer de enviar os parâmetros na <strong>chamada</strong> de entrega() também:</p>
+
+					<hr>
+
+					<code>entrega($bracos, $torco);</code>
+
+					<hr>
+
+					<p>Vamos a um <strong>exemplo mais completo</strong> com o que vimos:</p>
+
+					<p><strong>1.</strong> Temos três alunos e cada um tem duas notas da escola:</p>
+
+					<hr>
+
+					<code>
+						// aluno 1<br>
+						$nota1 = 10;<br>
+						$nota2 = 8;<br><br>
+
+						// aluno 2<br>
+						$nota3 = 8;<br>
+						$nota4 = 8;<br><br>
+
+						// aluno 3<br>
+						$nota5 = 5;<br>
+						$nota6 = 9;<br>
+					</code>
+
+					<hr>
+
+					<p><strong>2.</strong> É preciso fazer o cálculo da média de todos esses alunos. Uma forma de fazer isso é:</p>
+
+					<hr>
+
+					<code>
+						$media1 = $nota1 + $nota2;<br>
+						$media2 = $nota3 + $nota4;<br>
+						$media3 = $nota5 + $nota6;<br>
+					</code>
+
+					<hr>
+
+					<p><strong>3.</strong> Para mostrar isso:</p>
+
+					<hr>
+
+					<code>
+						echo "Média aluno 1:" . $media1 . "&lt;br&gt;";<br>
+						echo "Média aluno 2:" . $media2 . "&lt;br&gt;";<br>
+						echo "Média aluno 3:" . $media3 . "&lt;br&gt;";<br>
+					</code>
+
+					<hr>
+
+					<p><sup><strong>Obs:</strong> lembrando que <strong>&lt;br&gt;</strong> é a forma de <strong>pular uma linha em HTML</strong> para que o conteúdo não fica colado. E sim, estamos usando <strong>PHP</strong>, mas mostrando os resutados em uma <strong>página no navegador</strong>, por isso podemos usar elementos HTML <strong>de vez em quando</strong>.</sup></p>
+
+					<p>Mas isso não é <strong>nada prático</strong> e cria variáveis sem necessidade (o que enche a memória do computador). Uma forma mais profissional de fazer a mesma coisa é com uma <strong>função</strong>:</p>
+
+					<p><strong>1.</strong> Vamos manter as variáveis:</p>
+
+					<hr>
+
+					<code>
+						// aluno 1<br>
+						$nota1 = 10;<br>
+						$nota2 = 8;<br><br>
+
+						// aluno 2<br>
+						$nota3 = 8;<br>
+						$nota4 = 8;<br><br>
+
+						// aluno 3<br>
+						$nota5 = 5;<br>
+						$nota6 = 9;<br>
+					</code>
+
+					<hr>
+
+					<p><strong>2.</strong> E no lugar de criar uma variável para cada média, é possível criar <strong>apenas uma função</strong> que <strong>recebe as notas</strong> de cada aluno, faz o cálculo e <strong>retorna</strong> o valor:</p>
+
+					<hr>
+
+					<code>
+						function media ($n1, $n2) {<br>
+							&nbsp;&nbsp;return ($n1 + $n2) / 2;<br>
+						}<br>
+					</code>
+
+					<hr>
+
+					<p><strong>3.</strong> E para mostrar, basta <strong>chamar a função</strong> e <strong>passar os parâmetros</strong> no lugar das variáveis de média:</p>
+
+					<hr>
+
+					<code>
+						echo "Média aluno 1:" . media($nota1, $nota2) . "&lt;br&gt;";<br>
+						echo "Média aluno 2:" . media($nota3, $nota4) . "&lt;br&gt;";<br>
+						echo "Média aluno 3:" . media($nota5, $nota6) . "&lt;br&gt;";<br>
+					</code>
+
+					<hr>
+
+					<p><strong>4.</strong> Comparando os códigos:</p>
+
+					<hr>
+
+					<code>
+						// pior<br>
+							&nbsp;// aluno 1<br>
+							&nbsp;$nota1 = 10;<br>
+							&nbsp;$nota2 = 8;<br><br>
+
+							&nbsp;// aluno 2<br>
+							&nbsp;$nota3 = 8;<br>
+							&nbsp;$nota4 = 8;<br><br>
+
+							&nbsp;// aluno 3<br>
+							&nbsp;$nota5 = 5;<br>
+							&nbsp;$nota6 = 9;<br><br>
+
+							&nbsp;// média<br>
+							&nbsp;$media1 = $nota1 + $nota2;<br>
+							&nbsp;$media2 = $nota3 + $nota4;<br>
+							&nbsp;$media3 = $nota5 + $nota6;<br><br>
+
+							&nbsp;// mostrar<br>
+							&nbsp;echo "Média aluno 1:" . $media1 . "&lt;br&gt;";<br>
+							&nbsp;echo "Média aluno 2:" . $media2 . "&lt;br&gt;";<br>
+							&nbsp;echo "Média aluno 3:" . $media3 . "&lt;br&gt;";<br>
+
+						<hr>
+							
+						// melhor<br>
+							&nbsp;// aluno 1<br>
+							&nbsp;$nota1 = 10;<br>
+							&nbsp;$nota2 = 8;<br><br>
+
+							&nbsp;// aluno 2<br>
+							&nbsp;$nota3 = 8;<br>
+							&nbsp;$nota4 = 8;<br><br>
+
+							&nbsp;// aluno 3<br>
+							&nbsp;$nota5 = 5;<br>
+							&nbsp;$nota6 = 9;<br><br>
+
+							&nbsp;// média<br>
+							&nbsp;function media ($n1, $n2) {<br>
+								&nbsp;&nbsp;return ($n1 + $n2) / 2;<br>
+							&nbsp;}<br><br>
+
+							&nbsp;// mostrar<br>
+							&nbsp;echo "Média aluno 1:" . media($nota1, $nota2) . "&lt;br&gt;";<br>
+							&nbsp;echo "Média aluno 2:" . media($nota3, $nota4) . "&lt;br&gt;";<br>
+							&nbsp;echo "Média aluno 3:" . media($nota5, $nota6) . "&lt;br&gt;";<br>
+					</code>
+
+					<hr>
+
+					<p>Uma função também pode ser declarada <strong>como valor de uma variável</strong> por meio da chamada:</p>
+
+					<hr>
+
+					<code>
+						$num1 = 5;<br>
+						$num2 = 7;<br><br>
+
+						$resultado = soma($num1, $num2);<br><br>
+
+						function soma ($n1, $n2) {<br>
+							&nbsp;&nbsp;return $n1 + $n2;<br>
+						}<br>
+					</code>
+
+					<hr>
+
+					<p>Fazendo isso, a <strong>variável $resultado</strong> pode ser usada <strong>no lugar da chamada</strong>, o que facilita já que não é necessário digitar os parâmetros novamente em outros lugares do código.</p>
+					
+				</div>
+			</div>
+		</section>
+		
+	</main>
+
+	<footer>
+		<p class="repository">Para visualizar o repositório onde está o <strong>código</strong> deste site, <a href="https://github.com/o-Patrick/ensina-dev" target="_blank">clique aqui</a>!</p>
+	</footer>
+
+	<script src="../assets/js/bootstrap.min.js"></script>
+</body>
+</html>
